@@ -1,0 +1,10 @@
+D:\OOAD\Project\OOAD_Project\bin\Debug\OOAD_Project.exe.config
+D:\OOAD\Project\OOAD_Project\bin\Debug\OOAD_Project.exe
+D:\OOAD\Project\OOAD_Project\bin\Debug\OOAD_Project.pdb
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.AssemblyReference.cache
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.SuggestedBindingRedirects.cache
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.Properties.Resources.resources
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.GenerateResource.cache
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.CoreCompileInputs.cache
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.exe
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.pdb
