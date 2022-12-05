@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -15,6 +8,29 @@ namespace OOAD_Project
         public fMainPage()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStore_Click(object sender, EventArgs e)
+        {
+            pnView.Controls.Add(new ShopView());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fLogin fLogin = new fLogin();
+            fLogin.ShowDialog();
+            this.Close();
         }
     }
 }

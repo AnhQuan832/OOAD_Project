@@ -73,6 +73,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShopItem.Designer.cs">
+      <DependentUpon>ShopItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShopView.Designer.cs">
+      <DependentUpon>ShopView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +100,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShopItem.resx">
+      <DependentUpon>ShopItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopView.resx">
+      <DependentUpon>ShopView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
