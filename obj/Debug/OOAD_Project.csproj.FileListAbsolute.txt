@@ -13,3 +13,5 @@ D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.CopyComplete
 D:\OOAD\Project\OOAD_Project\bin\Debug\FontAwesome.Sharp.dll
 D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.fLogin.resources
 D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.fMainPage.resources
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.ShopItem.resources
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.ShopView.resources

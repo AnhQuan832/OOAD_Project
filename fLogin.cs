@@ -35,5 +35,15 @@ namespace OOAD_Project
                 tbPassword.PasswordChar = '•';
             }
         }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
     }
 }
