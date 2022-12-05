@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -16,7 +13,9 @@ namespace OOAD_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 form1 = new Form1();
+            //form1.Size = new System.Drawing.Size(1600, 900);
+            Application.Run(form1);
         }
     }
 }
