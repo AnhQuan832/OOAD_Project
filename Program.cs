@@ -13,7 +13,7 @@ namespace OOAD_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 form1 = new Form1();
+            fLogin form1 = new fLogin();
             //form1.Size = new System.Drawing.Size(1600, 900);
             Application.Run(form1);
         }
