@@ -4,6 +4,7 @@ using System.Windows.Forms;
 namespace OOAD_Project
 {
     public partial class fMainPage : Form
+
     {
         public fMainPage()
         {
@@ -22,7 +23,9 @@ namespace OOAD_Project
 
         private void btnStore_Click(object sender, EventArgs e)
         {
-            pnView.Controls.Add(new ShopView());
+            pnView.Controls.Clear();
+            pnView.Refresh();
+            pnView.Controls.Add(new UsCtr_Cart());
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -31,6 +34,18 @@ namespace OOAD_Project
             fLogin fLogin = new fLogin();
             fLogin.ShowDialog();
             this.Close();
+        }
+
+        private void fMainPage_Load(object sender, EventArgs e)
+        {
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            pnView.Controls.Clear();
+            pnView.Refresh();
+            pnView.Controls.Add(new ShopView());
         }
     }
 }

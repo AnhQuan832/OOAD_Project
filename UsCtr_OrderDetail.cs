@@ -25,11 +25,6 @@ namespace OOAD_Project
             this.guna2DateTimePicker2.Format = DateTimePickerFormat.Custom;
             this.guna2DateTimePicker2.CustomFormat= "dd MMM yyyy";
 
-            String[][] row = new String[][] { 
-                  new String[] {"0001", "Paris By Night", "01", "15.000" },
-                  new String[] {"0001", "Paris By Night", "01", "15.000" },
-                  new String[] {"0001", "Paris By Night", "01", "15.000" } };
-
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Night", "01", "15.000");
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Night", "01", "15.000");
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Nightdfjskjfksdjfksdjfksd", "01", "15.000");

@@ -85,6 +85,24 @@
     <Compile Include="ShopView.Designer.cs">
       <DependentUpon>ShopView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsCtr_OrderDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_OrderDetail.Designer.cs">
+      <DependentUpon>UsCtr_OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsCtr_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Order.Designer.cs">
+      <DependentUpon>UsCtr_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsCtr_Cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Cart.Designer.cs">
+      <DependentUpon>UsCtr_Cart.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,12 +117,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ShopItem.resx">
       <DependentUpon>ShopItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShopView.resx">
       <DependentUpon>ShopView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Cart.resx">
+      <DependentUpon>UsCtr_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Order.resx">
+      <DependentUpon>UsCtr_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_OrderDetail.resx">
+      <DependentUpon>UsCtr_OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -119,6 +147,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cream_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\film_poster.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

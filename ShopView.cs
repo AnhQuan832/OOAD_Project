@@ -26,7 +26,7 @@ namespace OOAD_Project
                 shopItem[i] = new ShopItem();
                 pnView.Controls.Add(shopItem[i]);
 
-                shopItem[i].ItemImage = Image.FromFile("C:/Users/quand/Downloads/1917_(2019)_Film_Poster.jpeg");
+                shopItem[i].ItemImage = Properties.Resources.film_poster;
                 shopItem[i].ItemImageLayout = PictureBoxSizeMode.StretchImage;
                 shopItem[i].ItemName = "Shogun";
                 shopItem[i].ItemGenre = "Inazuma";
