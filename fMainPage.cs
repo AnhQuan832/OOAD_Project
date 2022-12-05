@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOAD_Project
 {
-    public partial class Form1 : Form
+    public partial class fMainPage : Form
     {
-        public Form1()
+        public fMainPage()
         {
             InitializeComponent();
         }

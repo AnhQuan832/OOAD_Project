@@ -8,3 +8,8 @@ D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.GenerateResource.cach
 D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.CoreCompileInputs.cache
 D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.exe
 D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.pdb
+D:\OOAD\Project\OOAD_Project\bin\Debug\Guna.UI2.dll
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.csproj.CopyComplete
+D:\OOAD\Project\OOAD_Project\bin\Debug\FontAwesome.Sharp.dll
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.fLogin.resources
+D:\OOAD\Project\OOAD_Project\obj\Debug\OOAD_Project.fMainPage.resources
