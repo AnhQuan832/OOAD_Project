@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnManage = new FontAwesome.Sharp.IconButton();
             this.btnStatistic = new FontAwesome.Sharp.IconButton();
             this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.btnCart = new FontAwesome.Sharp.IconButton();
@@ -39,13 +40,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtDX = new FontAwesome.Sharp.IconButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pnView = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnManage = new FontAwesome.Sharp.IconButton();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.shopView1 = new OOAD_Project.ShopView();
+            this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
+            this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            this.pnView.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -71,6 +75,31 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(187, 884);
             this.guna2Panel1.TabIndex = 5;
+            // 
+            // btnManage
+            // 
+            this.btnManage.BackColor = System.Drawing.Color.Transparent;
+            this.btnManage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManage.FlatAppearance.BorderSize = 0;
+            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManage.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btnManage.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.btnManage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.btnManage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnManage.IconSize = 40;
+            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManage.Location = new System.Drawing.Point(0, 511);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManage.Name = "btnManage";
+            this.btnManage.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
+            this.btnManage.Size = new System.Drawing.Size(187, 74);
+            this.btnManage.TabIndex = 18;
+            this.btnManage.Text = "Manage";
+            this.btnManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnManage.UseVisualStyleBackColor = false;
             // 
             // btnStatistic
             // 
@@ -121,6 +150,7 @@
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnCart
             // 
@@ -240,85 +270,86 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.iconButton1);
+            this.guna2Panel2.Controls.Add(this.btnMinimize);
             this.guna2Panel2.Controls.Add(this.btnClose);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(187, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1269, 32);
+            this.guna2Panel2.Size = new System.Drawing.Size(1269, 95);
             this.guna2Panel2.TabIndex = 6;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(1209, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 32);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(1239, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Padding = new System.Windows.Forms.Padding(0, 3, 3, 0);
-            this.btnClose.Size = new System.Drawing.Size(30, 32);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnView
             // 
             this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnView.Controls.Add(this.usCtr_Order1);
+            this.pnView.Controls.Add(this.usCtr_Cart1);
+            this.pnView.Controls.Add(this.shopView1);
             this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnView.Location = new System.Drawing.Point(187, 32);
+            this.pnView.Location = new System.Drawing.Point(187, 95);
             this.pnView.Margin = new System.Windows.Forms.Padding(2);
             this.pnView.Name = "pnView";
-            this.pnView.Size = new System.Drawing.Size(1269, 852);
+            this.pnView.Size = new System.Drawing.Size(1269, 789);
             this.pnView.TabIndex = 7;
             // 
-            // btnManage
+            // btnMinimize
             // 
-            this.btnManage.BackColor = System.Drawing.Color.Transparent;
-            this.btnManage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManage.FlatAppearance.BorderSize = 0;
-            this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManage.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btnManage.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.btnManage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btnManage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnManage.IconSize = 40;
-            this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManage.Location = new System.Drawing.Point(0, 511);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(4);
-            this.btnManage.Name = "btnManage";
-            this.btnManage.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
-            this.btnManage.Size = new System.Drawing.Size(187, 74);
-            this.btnManage.TabIndex = 18;
-            this.btnManage.Text = "Manage";
-            this.btnManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnManage.UseVisualStyleBackColor = false;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimize.IconColor = System.Drawing.Color.DimGray;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 20;
+            this.btnMinimize.Location = new System.Drawing.Point(1205, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(27, 25);
+            this.btnMinimize.TabIndex = 6;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.btnClose.IconColor = System.Drawing.Color.DimGray;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 20;
+            this.btnClose.Location = new System.Drawing.Point(1234, 7);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 25);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // shopView1
+            // 
+            this.shopView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shopView1.Location = new System.Drawing.Point(0, 0);
+            this.shopView1.Name = "shopView1";
+            this.shopView1.Size = new System.Drawing.Size(1269, 789);
+            this.shopView1.TabIndex = 0;
+            // 
+            // usCtr_Cart1
+            // 
+            this.usCtr_Cart1.BackColor = System.Drawing.Color.White;
+            this.usCtr_Cart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_Cart1.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_Cart1.Name = "usCtr_Cart1";
+            this.usCtr_Cart1.Size = new System.Drawing.Size(1269, 789);
+            this.usCtr_Cart1.TabIndex = 1;
+            // 
+            // usCtr_Order1
+            // 
+            this.usCtr_Order1.BackColor = System.Drawing.Color.White;
+            this.usCtr_Order1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_Order1.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_Order1.Name = "usCtr_Order1";
+            this.usCtr_Order1.Size = new System.Drawing.Size(1269, 789);
+            this.usCtr_Order1.TabIndex = 2;
             // 
             // fMainPage
             // 
@@ -336,6 +367,7 @@
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            this.pnView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -352,9 +384,12 @@
         private FontAwesome.Sharp.IconButton btnHome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btnClose;
         private Guna.UI2.WinForms.Guna2Panel pnView;
         private FontAwesome.Sharp.IconButton btnManage;
+        private FontAwesome.Sharp.IconButton btnMinimize;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private UsCtr_Cart usCtr_Cart1;
+        private ShopView shopView1;
+        private UsCtr_Order usCtr_Order1;
     }
 }

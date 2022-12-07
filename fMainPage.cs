@@ -23,9 +23,7 @@ namespace OOAD_Project
 
         private void btnStore_Click(object sender, EventArgs e)
         {
-            pnView.Controls.Clear();
-            pnView.Refresh();
-            pnView.Controls.Add(new UsCtr_Cart());
+            shopView1.BringToFront();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -43,9 +41,12 @@ namespace OOAD_Project
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            pnView.Controls.Clear();
-            pnView.Refresh();
-            pnView.Controls.Add(new ShopView());
+            usCtr_Cart1.BringToFront();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            usCtr_Order1.BringToFront();
         }
     }
 }
