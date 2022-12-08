@@ -40,12 +40,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtDX = new FontAwesome.Sharp.IconButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnView = new Guna.UI2.WinForms.Guna2Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.pnView = new Guna.UI2.WinForms.Guna2Panel();
             this.shopView1 = new OOAD_Project.ShopView();
-            this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
             this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
+            this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -267,6 +267,7 @@
             this.ibtDX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtDX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtDX.UseVisualStyleBackColor = false;
+            this.ibtDX.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // guna2Panel2
             // 
@@ -278,19 +279,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1269, 95);
             this.guna2Panel2.TabIndex = 6;
-            // 
-            // pnView
-            // 
-            this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnView.Controls.Add(this.usCtr_Order1);
-            this.pnView.Controls.Add(this.usCtr_Cart1);
-            this.pnView.Controls.Add(this.shopView1);
-            this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnView.Location = new System.Drawing.Point(187, 95);
-            this.pnView.Margin = new System.Windows.Forms.Padding(2);
-            this.pnView.Name = "pnView";
-            this.pnView.Size = new System.Drawing.Size(1269, 789);
-            this.pnView.TabIndex = 7;
             // 
             // btnMinimize
             // 
@@ -325,22 +313,26 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pnView
+            // 
+            this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnView.Controls.Add(this.shopView1);
+            this.pnView.Controls.Add(this.usCtr_Order1);
+            this.pnView.Controls.Add(this.usCtr_Cart1);
+            this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnView.Location = new System.Drawing.Point(187, 95);
+            this.pnView.Margin = new System.Windows.Forms.Padding(2);
+            this.pnView.Name = "pnView";
+            this.pnView.Size = new System.Drawing.Size(1269, 789);
+            this.pnView.TabIndex = 7;
+            // 
             // shopView1
             // 
             this.shopView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.shopView1.Location = new System.Drawing.Point(0, 0);
             this.shopView1.Name = "shopView1";
             this.shopView1.Size = new System.Drawing.Size(1269, 789);
-            this.shopView1.TabIndex = 0;
-            // 
-            // usCtr_Cart1
-            // 
-            this.usCtr_Cart1.BackColor = System.Drawing.Color.White;
-            this.usCtr_Cart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_Cart1.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_Cart1.Name = "usCtr_Cart1";
-            this.usCtr_Cart1.Size = new System.Drawing.Size(1269, 789);
-            this.usCtr_Cart1.TabIndex = 1;
+            this.shopView1.TabIndex = 5;
             // 
             // usCtr_Order1
             // 
@@ -350,6 +342,15 @@
             this.usCtr_Order1.Name = "usCtr_Order1";
             this.usCtr_Order1.Size = new System.Drawing.Size(1269, 789);
             this.usCtr_Order1.TabIndex = 2;
+            // 
+            // usCtr_Cart1
+            // 
+            this.usCtr_Cart1.BackColor = System.Drawing.Color.White;
+            this.usCtr_Cart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_Cart1.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_Cart1.Name = "usCtr_Cart1";
+            this.usCtr_Cart1.Size = new System.Drawing.Size(1269, 789);
+            this.usCtr_Cart1.TabIndex = 1;
             // 
             // fMainPage
             // 

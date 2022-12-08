@@ -1,12 +1,4 @@
-﻿using OOAD_Project.Properties;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -50,6 +42,13 @@ namespace OOAD_Project
             guna2DataGridView1.Rows[3].Cells[2].Value = "2";
             guna2DataGridView1.Rows[3].Cells[3].Value = "15.000";
             guna2DataGridView1.Rows[3].Cells[4].Value = "30.000";
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            string ID = "0001";
+            messsageBox.Caption = "Your order ID is: " + ID;
+            messsageBox.Show();
         }
     }
 }

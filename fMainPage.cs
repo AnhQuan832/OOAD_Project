@@ -6,6 +6,7 @@ namespace OOAD_Project
     public partial class fMainPage : Form
 
     {
+        private int orderID;
         public fMainPage()
         {
             InitializeComponent();
@@ -48,5 +49,6 @@ namespace OOAD_Project
         {
             usCtr_Order1.BringToFront();
         }
+
     }
 }
