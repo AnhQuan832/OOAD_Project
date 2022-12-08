@@ -85,8 +85,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.dgvOrder.Location = new System.Drawing.Point(21, 129);
-            this.dgvOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvOrder.Location = new System.Drawing.Point(16, 105);
             this.dgvOrder.MultiSelect = false;
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -105,7 +104,7 @@
             this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrder.RowTemplate.DividerHeight = 1;
             this.dgvOrder.RowTemplate.Height = 70;
-            this.dgvOrder.Size = new System.Drawing.Size(1653, 916);
+            this.dgvOrder.Size = new System.Drawing.Size(1240, 744);
             this.dgvOrder.TabIndex = 1;
             this.dgvOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvOrder.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -128,7 +127,7 @@
             this.dgvOrder.ThemeStyle.RowsStyle.Height = 70;
             this.dgvOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellContentClick);
+            this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
             // Id
             // 
@@ -215,27 +214,26 @@
             this.guna2TextBox1.IconRight = global::OOAD_Project.Properties.Resources.search_icon;
             this.guna2TextBox1.IconRightOffset = new System.Drawing.Point(13, 0);
             this.guna2TextBox1.IconRightSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox1.Location = new System.Drawing.Point(1263, 39);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(16, 4, 4, 4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(947, 32);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.Padding = new System.Windows.Forms.Padding(13, 5, 0, 5);
+            this.guna2TextBox1.Padding = new System.Windows.Forms.Padding(10, 4, 0, 4);
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Search";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.BorderRadius = 200;
-            this.guna2TextBox1.Size = new System.Drawing.Size(412, 59);
+            this.guna2TextBox1.Size = new System.Drawing.Size(309, 48);
             this.guna2TextBox1.TabIndex = 2;
             // 
             // UsCtr_Order
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.dgvOrder);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UsCtr_Order";
-            this.Size = new System.Drawing.Size(1692, 1049);
+            this.Size = new System.Drawing.Size(1269, 852);
             this.Load += new System.EventHandler(this.UsCtr_Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);

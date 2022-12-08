@@ -57,3 +57,6 @@ D:\OOAD\Project\obj\Debug\OOAD_Project.pdb
 D:\OOAD\Project\obj\Debug\OOAD_Project.fOrderDetail.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_RentingDetail.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_ReturningDisc.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.fOrderDetail.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_RentingDetail.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_ReturningDisc.resources
