@@ -21,6 +21,10 @@ namespace OOAD_Project
 
         private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0)
+                return;
+            fOrderDetail fOrderDetail = new fOrderDetail(int.Parse(dgvOrder.Rows[e.RowIndex].Cells[0].Value.ToString()), dgvOrder.Rows[e.RowIndex].Cells[6].Value.ToString());
+            fOrderDetail.ShowDialog();
 
         }
     }

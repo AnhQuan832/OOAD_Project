@@ -5,23 +5,21 @@ namespace OOAD_Project
 {
     public partial class UsCtr_OrderDetail : UserControl
     {
-        public UsCtr_OrderDetail()
+        int ID;
+        public UsCtr_OrderDetail(int ID)
         {
             InitializeComponent();
+            this.ID = ID;
         }
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            this.guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.CustomFormat = "dd MMM yyyy";
-
-            this.guna2DateTimePicker2.Format = DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker2.CustomFormat = "dd MMM yyyy";
-
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Night", "01", "15.000");
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Night", "01", "15.000");
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Nightdfjskjfksdjfksdjfksd", "01", "15.000");
             this.guna2DataGridView1.Rows.Add("0001", "Paris By Night", "01", "15.000");
+
+            tbID.Text = ID.ToString();
         }
 
         private void label7_Click(object sender, EventArgs e)

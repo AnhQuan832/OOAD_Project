@@ -54,3 +54,6 @@ D:\OOAD\Project\obj\Debug\OOAD_Project.csproj.CoreCompileInputs.cache
 D:\OOAD\Project\obj\Debug\OOAD_Project.csproj.CopyComplete
 D:\OOAD\Project\obj\Debug\OOAD_Project.exe
 D:\OOAD\Project\obj\Debug\OOAD_Project.pdb
+D:\OOAD\Project\obj\Debug\OOAD_Project.fOrderDetail.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_RentingDetail.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_ReturningDisc.resources
