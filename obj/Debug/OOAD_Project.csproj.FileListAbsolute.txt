@@ -72,4 +72,3 @@ D:\BaiTap\Nam3\HK1\OOAD\Project\bin\Debug\LiveCharts.Wpf.xml
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_UserProfilecs.resources
-D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.fChangePassword.resources
