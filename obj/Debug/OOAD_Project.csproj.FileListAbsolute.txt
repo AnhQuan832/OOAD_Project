@@ -60,3 +60,16 @@ D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_ReturningDisc.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.fOrderDetail.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_RentingDetail.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_ReturningDisc.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Manage.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Card.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
+D:\OOAD\Project\bin\Debug\LiveCharts.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.xml
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.xml
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.xml

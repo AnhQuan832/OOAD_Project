@@ -39,6 +39,15 @@
     <Reference Include="Guna.UI2">
       <HintPath>C:\Users\quand\Downloads\GunaFrameWorkCracked-main\GunaFrameWorkCracked-main\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -47,6 +56,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +68,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="fLogin.cs">
@@ -92,6 +103,24 @@
     <Compile Include="ShopView.Designer.cs">
       <DependentUpon>ShopView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsCtr_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Card.Designer.cs">
+      <DependentUpon>UsCtr_Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsCtr_HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_HomePage.Designer.cs">
+      <DependentUpon>UsCtr_HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsCtr_Manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Manage.Designer.cs">
+      <DependentUpon>UsCtr_Manage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsCtr_OrderDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +151,12 @@
     <Compile Include="UsCtr_ReturningDisc.Designer.cs">
       <DependentUpon>UsCtr_ReturningDisc.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsCtr_Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Statistic.Designer.cs">
+      <DependentUpon>UsCtr_Statistic.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,8 +182,17 @@
     <EmbeddedResource Include="ShopView.resx">
       <DependentUpon>ShopView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Card.resx">
+      <DependentUpon>UsCtr_Card.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_Cart.resx">
       <DependentUpon>UsCtr_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_HomePage.resx">
+      <DependentUpon>UsCtr_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Manage.resx">
+      <DependentUpon>UsCtr_Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_Order.resx">
       <DependentUpon>UsCtr_Order.cs</DependentUpon>
@@ -161,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_ReturningDisc.resx">
       <DependentUpon>UsCtr_ReturningDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Statistic.resx">
+      <DependentUpon>UsCtr_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

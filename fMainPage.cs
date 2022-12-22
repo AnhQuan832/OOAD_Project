@@ -10,22 +10,10 @@ namespace OOAD_Project
         public fMainPage()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void btnStore_Click(object sender, EventArgs e)
-        {
-            shopView1.BringToFront();
-        }
+
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
@@ -35,20 +23,14 @@ namespace OOAD_Project
             this.Close();
         }
 
-        private void fMainPage_Load(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            this.Close();
         }
 
-        private void btnCart_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            usCtr_Cart1.BringToFront();
+            WindowState = FormWindowState.Minimized;
         }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            usCtr_Order1.BringToFront();
-        }
-
     }
 }
