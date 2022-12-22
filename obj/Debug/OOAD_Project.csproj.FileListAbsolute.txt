@@ -72,3 +72,16 @@ D:\BaiTap\Nam3\HK1\OOAD\Project\bin\Debug\LiveCharts.Wpf.xml
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_UserProfilecs.resources
+D:\OOAD\Project\bin\Debug\LiveCharts.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.dll
+D:\OOAD\Project\bin\Debug\LiveCharts.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.xml
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.WinForms.xml
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.pdb
+D:\OOAD\Project\bin\Debug\LiveCharts.Wpf.xml
+D:\OOAD\Project\obj\Debug\OOAD_Project.DiscCard.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
+D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_UserProfilecs.resources

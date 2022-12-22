@@ -50,5 +50,18 @@ namespace OOAD_Project
             usCtr_Order1.BringToFront();
         }
 
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            usCtr_Statistic2.BringToFront();
+        }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            usCtr_HomePage2.BringToFront();
+        }
     }
 }
