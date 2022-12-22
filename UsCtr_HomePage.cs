@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -15,6 +9,30 @@ namespace OOAD_Project
         public UsCtr_HomePage()
         {
             InitializeComponent();
+            LoadCard();
+        }
+
+        private void UsCtr_HomePage_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void LoadCard()
+        {
+            int n = 4;
+            DiscCard[] DiscCard = new DiscCard[n];
+
+            for (int i = 0; i < DiscCard.Length; i++)
+            {
+                DiscCard[i] = new DiscCard();
+                pnCardView.Controls.Add(DiscCard[i]);
+
+                DiscCard[i].ItemImage = Properties.Resources.film_poster;
+                DiscCard[i].ItemName = "Shogun";
+                if (i == 0)
+                    DiscCard[i].Location = new Point(15, 15);
+                else
+                    DiscCard[i].Location = new Point(DiscCard[i - 1].Location.X + 285, 15);
+            }
         }
     }
 }

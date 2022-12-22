@@ -70,6 +70,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiscCard.Designer.cs">
+      <DependentUpon>DiscCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="UsCtr_UserProfilecs.Designer.cs">
       <DependentUpon>UsCtr_UserProfilecs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DiscCard.resx">
+      <DependentUpon>DiscCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
