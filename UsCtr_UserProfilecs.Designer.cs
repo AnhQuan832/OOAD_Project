@@ -38,12 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnShowPassword = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnShowPassword = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,31 +212,12 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(142, 511);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(149, 501);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(232, 37);
             this.guna2HtmlLabel1.TabIndex = 12;
             this.guna2HtmlLabel1.Text = "Show password";
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnShowPassword.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.btnShowPassword.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.btnShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowPassword.Location = new System.Drawing.Point(70, 511);
-            this.btnShowPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(66, 37);
-            this.btnShowPassword.TabIndex = 11;
-            this.btnShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.btnShowPassword.UncheckedState.BorderRadius = 20;
-            this.btnShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.btnShowPassword.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.btnShowPassword.UncheckedState.InnerBorderRadius = 15;
-            this.btnShowPassword.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // btnPlaceOrder
             // 
@@ -286,6 +267,17 @@
             this.guna2Button1.TabIndex = 14;
             this.guna2Button1.Text = "Update";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label5.Location = new System.Drawing.Point(1248, 457);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(341, 28);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Click the image to change your avatar";
+            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::OOAD_Project.Properties.Resources.Cream_logo;
@@ -299,27 +291,33 @@
             this.guna2CirclePictureBox1.TabIndex = 15;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // label5
+            // btnShowPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(1276, 454);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 28);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Click the avatar to change avatar";
+            this.btnShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnShowPassword.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnShowPassword.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowPassword.Location = new System.Drawing.Point(77, 501);
+            this.btnShowPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(66, 37);
+            this.btnShowPassword.TabIndex = 21;
+            this.btnShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btnShowPassword.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.btnShowPassword.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // UsCtr_UserProfilecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btnPlaceOrder);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -352,11 +350,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch btnShowPassword;
         private Guna.UI2.WinForms.Guna2Button btnPlaceOrder;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch btnShowPassword;
     }
 }
