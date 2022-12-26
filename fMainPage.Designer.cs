@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnView = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnManage = new FontAwesome.Sharp.IconButton();
             this.btnStatistic = new FontAwesome.Sharp.IconButton();
             this.btnOrder = new FontAwesome.Sharp.IconButton();
@@ -43,16 +39,20 @@
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtDX = new FontAwesome.Sharp.IconButton();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.pnView = new Guna.UI2.WinForms.Guna2Panel();
+            this.usCtr_HomePage2 = new OOAD_Project.UsCtr_HomePage();
+            this.usCtr_Statistic2 = new OOAD_Project.UsCtr_Statistic();
+            this.usCtr_UserProfilecs2 = new OOAD_Project.UsCtr_UserProfilecs();
             this.shopView1 = new OOAD_Project.ShopView();
             this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
             this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
-            this.usCtr_UserProfilecs2 = new OOAD_Project.UsCtr_UserProfilecs();
-            this.usCtr_Statistic2 = new OOAD_Project.UsCtr_Statistic();
-            this.usCtr_HomePage2 = new OOAD_Project.UsCtr_HomePage();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.pnView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -78,66 +78,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(187, 884);
             this.guna2Panel1.TabIndex = 5;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.btnMinimize);
-            this.guna2Panel2.Controls.Add(this.btnClose);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(187, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1268, 95);
-            this.guna2Panel2.TabIndex = 6;
-            // 
-            // pnView
-            // 
-            this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnView.Controls.Add(this.usCtr_HomePage2);
-            this.pnView.Controls.Add(this.usCtr_Statistic2);
-            this.pnView.Controls.Add(this.usCtr_UserProfilecs2);
-            this.pnView.Controls.Add(this.shopView1);
-            this.pnView.Controls.Add(this.usCtr_Order1);
-            this.pnView.Controls.Add(this.usCtr_Cart1);
-            this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnView.Location = new System.Drawing.Point(187, 95);
-            this.pnView.Margin = new System.Windows.Forms.Padding(2);
-            this.pnView.Name = "pnView";
-            this.pnView.Size = new System.Drawing.Size(1268, 789);
-            this.pnView.TabIndex = 7;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimize.IconColor = System.Drawing.Color.DimGray;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(1205, 4);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(27, 25);
-            this.btnMinimize.TabIndex = 6;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.btnClose.IconColor = System.Drawing.Color.DimGray;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(1234, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(27, 25);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnManage
             // 
@@ -335,6 +275,91 @@
             this.ibtDX.UseVisualStyleBackColor = false;
             this.ibtDX.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.btnMinimize);
+            this.guna2Panel2.Controls.Add(this.btnClose);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(187, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1268, 95);
+            this.guna2Panel2.TabIndex = 6;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimize.IconColor = System.Drawing.Color.DimGray;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 20;
+            this.btnMinimize.Location = new System.Drawing.Point(1205, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(27, 25);
+            this.btnMinimize.TabIndex = 6;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.btnClose.IconColor = System.Drawing.Color.DimGray;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 20;
+            this.btnClose.Location = new System.Drawing.Point(1234, 7);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 25);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // pnView
+            // 
+            this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnView.Controls.Add(this.usCtr_HomePage2);
+            this.pnView.Controls.Add(this.usCtr_Statistic2);
+            this.pnView.Controls.Add(this.usCtr_UserProfilecs2);
+            this.pnView.Controls.Add(this.shopView1);
+            this.pnView.Controls.Add(this.usCtr_Order1);
+            this.pnView.Controls.Add(this.usCtr_Cart1);
+            this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnView.Location = new System.Drawing.Point(187, 95);
+            this.pnView.Margin = new System.Windows.Forms.Padding(2);
+            this.pnView.Name = "pnView";
+            this.pnView.Size = new System.Drawing.Size(1268, 789);
+            this.pnView.TabIndex = 7;
+            // 
+            // usCtr_HomePage2
+            // 
+            this.usCtr_HomePage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_HomePage2.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_HomePage2.Name = "usCtr_HomePage2";
+            this.usCtr_HomePage2.Size = new System.Drawing.Size(1268, 789);
+            this.usCtr_HomePage2.TabIndex = 8;
+            // 
+            // usCtr_Statistic2
+            // 
+            this.usCtr_Statistic2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_Statistic2.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_Statistic2.Name = "usCtr_Statistic2";
+            this.usCtr_Statistic2.Size = new System.Drawing.Size(1268, 789);
+            this.usCtr_Statistic2.TabIndex = 7;
+            // 
+            // usCtr_UserProfilecs2
+            // 
+            this.usCtr_UserProfilecs2.BackColor = System.Drawing.Color.White;
+            this.usCtr_UserProfilecs2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_UserProfilecs2.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_UserProfilecs2.Name = "usCtr_UserProfilecs2";
+            this.usCtr_UserProfilecs2.Size = new System.Drawing.Size(1268, 789);
+            this.usCtr_UserProfilecs2.TabIndex = 6;
+            // 
             // shopView1
             // 
             this.shopView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -364,31 +389,6 @@
             this.usCtr_Cart1.Size = new System.Drawing.Size(1268, 789);
             this.usCtr_Cart1.TabIndex = 1;
             // 
-            // usCtr_UserProfilecs2
-            // 
-            this.usCtr_UserProfilecs2.BackColor = System.Drawing.Color.White;
-            this.usCtr_UserProfilecs2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_UserProfilecs2.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_UserProfilecs2.Name = "usCtr_UserProfilecs2";
-            this.usCtr_UserProfilecs2.Size = new System.Drawing.Size(1268, 789);
-            this.usCtr_UserProfilecs2.TabIndex = 6;
-            // 
-            // usCtr_Statistic2
-            // 
-            this.usCtr_Statistic2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_Statistic2.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_Statistic2.Name = "usCtr_Statistic2";
-            this.usCtr_Statistic2.Size = new System.Drawing.Size(1268, 789);
-            this.usCtr_Statistic2.TabIndex = 7;
-            // 
-            // usCtr_HomePage2
-            // 
-            this.usCtr_HomePage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_HomePage2.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_HomePage2.Name = "usCtr_HomePage2";
-            this.usCtr_HomePage2.Size = new System.Drawing.Size(1268, 789);
-            this.usCtr_HomePage2.TabIndex = 8;
-            // 
             // fMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,9 +403,9 @@
             this.Text = "fMainPage";
             this.Load += new System.EventHandler(this.fMainPage_Load);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.pnView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
