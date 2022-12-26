@@ -76,6 +76,12 @@
     <Compile Include="DiscCard.Designer.cs">
       <DependentUpon>DiscCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="fChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChangePassword.Designer.cs">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     </Compile>
     <Compile Include="ShopView.Designer.cs">
       <DependentUpon>ShopView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsCtr_Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Card.Designer.cs">
+      <DependentUpon>UsCtr_Card.cs</DependentUpon>
     </Compile>
     <Compile Include="UsCtr_HomePage.cs">
       <SubType>UserControl</SubType>
@@ -162,8 +174,17 @@
     <Compile Include="UsCtr_UserProfilecs.Designer.cs">
       <DependentUpon>UsCtr_UserProfilecs.cs</DependentUpon>
     </Compile>
+    <Compile Include="UssCtr_Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UssCtr_Statistic.Designer.cs">
+      <DependentUpon>UssCtr_Statistic.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DiscCard.resx">
       <DependentUpon>DiscCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChangePassword.resx">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -189,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShopView.resx">
       <DependentUpon>ShopView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Card.resx">
+      <DependentUpon>UsCtr_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_Cart.resx">
       <DependentUpon>UsCtr_Cart.cs</DependentUpon>
@@ -216,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_UserProfilecs.resx">
       <DependentUpon>UsCtr_UserProfilecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UssCtr_Statistic.resx">
+      <DependentUpon>UssCtr_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

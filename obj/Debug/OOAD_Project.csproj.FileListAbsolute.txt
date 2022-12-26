@@ -85,3 +85,7 @@ D:\OOAD\Project\obj\Debug\OOAD_Project.DiscCard.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_UserProfilecs.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.DiscCard.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.fChangePassword.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Card.resources
+D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UssCtr_Statistic.resources
