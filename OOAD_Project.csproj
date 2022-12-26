@@ -126,6 +126,12 @@
     <Compile Include="UsCtr_HomePage.Designer.cs">
       <DependentUpon>UsCtr_HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsCtr_Manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCtr_Manage.Designer.cs">
+      <DependentUpon>UsCtr_Manage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsCtr_OrderDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_HomePage.resx">
       <DependentUpon>UsCtr_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCtr_Manage.resx">
+      <DependentUpon>UsCtr_Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_Order.resx">
       <DependentUpon>UsCtr_Order.cs</DependentUpon>

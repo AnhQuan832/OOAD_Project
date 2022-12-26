@@ -36,14 +36,38 @@ namespace OOAD_Project
             }
         }
 
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void fLogin_Load(object sender, EventArgs e)
         {
             //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void btnShowPasswordSU_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnShowPasswordSU.Checked)
+            {
+                tbPasswordSU.PasswordChar = '\0';
+            }
+            else
+            {
+                tbPasswordSU.PasswordChar = '•';
+            }
+        }
+
+        private void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            pnSignIn.BringToFront();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            //Create new account
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            pnSignUp.BringToFront();
         }
     }
 }
