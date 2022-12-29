@@ -49,6 +49,7 @@
             this.shopView1 = new OOAD_Project.ShopView();
             this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
             this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
+            this.usCtr_Manage1 = new OOAD_Project.UsCtr_Manage();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -322,6 +323,7 @@
             // pnView
             // 
             this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnView.Controls.Add(this.usCtr_Manage1);
             this.pnView.Controls.Add(this.usCtr_HomePage2);
             this.pnView.Controls.Add(this.usCtr_Statistic2);
             this.pnView.Controls.Add(this.usCtr_UserProfilecs2);
@@ -389,6 +391,15 @@
             this.usCtr_Cart1.Size = new System.Drawing.Size(1268, 789);
             this.usCtr_Cart1.TabIndex = 1;
             // 
+            // usCtr_Manage1
+            // 
+            this.usCtr_Manage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_Manage1.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_Manage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usCtr_Manage1.Name = "usCtr_Manage1";
+            this.usCtr_Manage1.Size = new System.Drawing.Size(1268, 789);
+            this.usCtr_Manage1.TabIndex = 9;
+            // 
             // fMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,5 +446,6 @@
         private UsCtr_HomePage usCtr_HomePage2;
         private UsCtr_Statistic usCtr_Statistic2;
         private UsCtr_UserProfilecs usCtr_UserProfilecs2;
+        private UsCtr_Manage usCtr_Manage1;
     }
 }

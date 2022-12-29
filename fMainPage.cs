@@ -57,6 +57,7 @@ namespace OOAD_Project
 
         private void btnManage_Click(object sender, EventArgs e)
         {
+            usCtr_Manage1.BringToFront();
         }
 
         private void btnHome_Click_1(object sender, EventArgs e)
