@@ -34,6 +34,7 @@
             this.lbGenre = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lbPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +103,28 @@
             this.lbPrice.TabIndex = 3;
             this.lbPrice.Text = "Price";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(320, 431);
+            this.guna2Panel1.TabIndex = 0;
+            // 
             // ShopItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.guna2CircleButton1);
             this.Controls.Add(this.lbGenre);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.pbDisc);
+            this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShopItem";
             this.Size = new System.Drawing.Size(320, 431);
@@ -128,5 +141,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbGenre;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbPrice;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

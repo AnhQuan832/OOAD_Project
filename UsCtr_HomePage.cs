@@ -19,11 +19,11 @@ namespace OOAD_Project
         private void LoadCard()
         {
             int n = 4;
-            DiscCard[] DiscCard = new DiscCard[n];
+            UsCtr_Card[] DiscCard = new UsCtr_Card[n];
 
             for (int i = 0; i < DiscCard.Length; i++)
             {
-                DiscCard[i] = new DiscCard();
+                DiscCard[i] = new UsCtr_Card();
                 pnCardView.Controls.Add(DiscCard[i]);
 
                 DiscCard[i].ItemImage = Properties.Resources.film_poster;

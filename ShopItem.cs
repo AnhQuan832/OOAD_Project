@@ -22,7 +22,7 @@ namespace OOAD_Project
         public ShopItem()
         {
             InitializeComponent();
-            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         public Image ItemImage

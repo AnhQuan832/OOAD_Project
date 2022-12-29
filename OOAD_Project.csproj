@@ -174,12 +174,6 @@
     <Compile Include="UsCtr_UserProfilecs.Designer.cs">
       <DependentUpon>UsCtr_UserProfilecs.cs</DependentUpon>
     </Compile>
-    <Compile Include="UssCtr_Statistic.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UssCtr_Statistic.Designer.cs">
-      <DependentUpon>UssCtr_Statistic.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="DiscCard.resx">
       <DependentUpon>DiscCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsCtr_UserProfilecs.resx">
       <DependentUpon>UsCtr_UserProfilecs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UssCtr_Statistic.resx">
-      <DependentUpon>UssCtr_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
