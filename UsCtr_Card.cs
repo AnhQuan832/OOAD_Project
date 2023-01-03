@@ -46,10 +46,17 @@ namespace OOAD_Project
             if (isSubscribe)
             {
                 btnSubscribe.Text = "Unsubscribe";
+                btnSubscribe.BorderColor = Color.FromArgb(57, 110, 176);
+                btnSubscribe.BorderThickness = 2;
+                btnSubscribe.FillColor = Color.White;
+                btnSubscribe.ForeColor = Color.FromArgb(57, 110, 176);
             }
             else
             {
                 btnSubscribe.Text = "Subscribe";
+                btnSubscribe.BorderThickness = 0;
+                btnSubscribe.FillColor = Color.FromArgb(57, 110, 176);
+                btnSubscribe.ForeColor = Color.FromArgb(255, 239, 214);
             }
         }
     }

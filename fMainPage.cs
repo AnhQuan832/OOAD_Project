@@ -6,7 +6,6 @@ namespace OOAD_Project
     public partial class fMainPage : Form
 
     {
-        private int orderID;
         public fMainPage()
         {
             InitializeComponent();
@@ -50,11 +49,6 @@ namespace OOAD_Project
             usCtr_Order1.BringToFront();
         }
 
-        private void btnStatistic_Click(object sender, EventArgs e)
-        {
-            usCtr_Statistic2.BringToFront();
-        }
-
         private void btnManage_Click(object sender, EventArgs e)
         {
             usCtr_Manage1.BringToFront();
@@ -63,6 +57,10 @@ namespace OOAD_Project
         private void btnHome_Click_1(object sender, EventArgs e)
         {
             usCtr_HomePage2.BringToFront();
+        }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -124,7 +124,6 @@
             // 
             this.btnSignUp.BorderRadius = 15;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignUp.DefaultAutoSize = true;
             this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -132,10 +131,10 @@
             this.btnSignUp.FillColor = System.Drawing.Color.Transparent;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnSignUp.Location = new System.Drawing.Point(128, 608);
+            this.btnSignUp.Location = new System.Drawing.Point(115, 608);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(190, 43);
+            this.btnSignUp.Size = new System.Drawing.Size(215, 43);
             this.btnSignUp.TabIndex = 10;
             this.btnSignUp.Text = "Create account";
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -154,7 +153,7 @@
             this.btnLogin.Location = new System.Drawing.Point(79, 537);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(272, 67);
+            this.btnLogin.Size = new System.Drawing.Size(272, 65);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Sign in";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -194,7 +193,7 @@
             this.tbUsername.MaxLength = 20;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PasswordChar = '\0';
-            this.tbUsername.PlaceholderText = "Usename";
+            this.tbUsername.PlaceholderText = "Username";
             this.tbUsername.SelectedText = "";
             this.tbUsername.Size = new System.Drawing.Size(424, 60);
             this.tbUsername.TabIndex = 7;
@@ -256,7 +255,6 @@
             // 
             this.btnBackToLogin.BorderRadius = 15;
             this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackToLogin.DefaultAutoSize = true;
             this.btnBackToLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBackToLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBackToLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -514,10 +512,8 @@
             this.Load += new System.EventHandler(this.fLogin_Load);
             this.pnBackground.ResumeLayout(false);
             this.pnSignIn.ResumeLayout(false);
-            this.pnSignIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnSignUp.ResumeLayout(false);
-            this.pnSignUp.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
