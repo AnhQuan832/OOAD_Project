@@ -29,9 +29,9 @@ namespace OOAD_Project
                 DiscCard[i].ItemImage = Properties.Resources.film_poster;
                 DiscCard[i].ItemName = "Shogun";
                 if (i == 0)
-                    DiscCard[i].Location = new Point(15, 15);
+                    DiscCard[i].Location = new Point(25, 100);
                 else
-                    DiscCard[i].Location = new Point(DiscCard[i - 1].Location.X + 285, 15);
+                    DiscCard[i].Location = new Point(DiscCard[i - 1].Location.X + 300, 100);
             }
         }
     }

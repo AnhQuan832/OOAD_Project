@@ -41,7 +41,7 @@
             this.pbDisc.BorderRadius = 5;
             this.pbDisc.ImageRotate = 0F;
             this.pbDisc.Location = new System.Drawing.Point(64, 31);
-            this.pbDisc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbDisc.Margin = new System.Windows.Forms.Padding(4);
             this.pbDisc.Name = "pbDisc";
             this.pbDisc.Size = new System.Drawing.Size(227, 273);
             this.pbDisc.TabIndex = 1;
@@ -52,7 +52,7 @@
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbName.Location = new System.Drawing.Point(64, 322);
-            this.lbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(71, 38);
             this.lbName.TabIndex = 2;
@@ -61,14 +61,16 @@
             // btnSubscribe
             // 
             this.btnSubscribe.BorderRadius = 15;
+            this.btnSubscribe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubscribe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSubscribe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSubscribe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSubscribe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSubscribe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSubscribe.ForeColor = System.Drawing.Color.White;
+            this.btnSubscribe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnSubscribe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSubscribe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
             this.btnSubscribe.Location = new System.Drawing.Point(64, 391);
-            this.btnSubscribe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubscribe.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubscribe.Name = "btnSubscribe";
             this.btnSubscribe.Size = new System.Drawing.Size(240, 55);
             this.btnSubscribe.TabIndex = 3;
@@ -95,7 +97,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.pbDisc);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsCtr_Card";
             this.Size = new System.Drawing.Size(361, 469);
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
