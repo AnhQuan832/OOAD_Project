@@ -19,10 +19,15 @@ namespace OOAD_Project
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
       );
-        public UsCtr_Card()
+        public UsCtr_Card(int permission)
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            //set permisson admin is 1 and staff is 0
+            if (permission == 0)
+            {
+                btnJustify.Visible = false;
+            }
         }
 
         public Image ItemImage
