@@ -105,7 +105,6 @@ D:\OOAD\OOAD\bin\Debug\LiveCharts.Wpf.pdb
 D:\OOAD\OOAD\bin\Debug\LiveCharts.Wpf.xml
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.csproj.AssemblyReference.cache
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.csproj.SuggestedBindingRedirects.cache
-D:\OOAD\OOAD\obj\Debug\OOAD_Project.DiscCard.resources
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.fChangePassword.resources
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.fLogin.resources
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.fMainPage.resources

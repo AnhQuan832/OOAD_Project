@@ -32,7 +32,9 @@
             this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSubscribe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnJustify = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbDisc
@@ -82,11 +84,23 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.btnJustify);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(361, 469);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // btnJustify
+            // 
+            this.btnJustify.BackColor = System.Drawing.Color.Transparent;
+            this.btnJustify.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnJustify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnJustify.Location = new System.Drawing.Point(316, -7);
+            this.btnJustify.Name = "btnJustify";
+            this.btnJustify.Size = new System.Drawing.Size(27, 43);
+            this.btnJustify.TabIndex = 0;
+            this.btnJustify.Text = "...";
             // 
             // UsCtr_Card
             // 
@@ -101,6 +115,8 @@
             this.Name = "UsCtr_Card";
             this.Size = new System.Drawing.Size(361, 469);
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +128,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbName;
         private Guna.UI2.WinForms.Guna2Button btnSubscribe;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel btnJustify;
     }
 }
