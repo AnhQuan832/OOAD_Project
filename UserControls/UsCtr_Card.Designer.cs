@@ -32,7 +32,7 @@
             this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSubscribe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnJustify = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnJustify = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             // 
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.lbName.Location = new System.Drawing.Point(64, 322);
             this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
@@ -93,14 +94,21 @@
             // 
             // btnJustify
             // 
+            this.btnJustify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnJustify.BackColor = System.Drawing.Color.Transparent;
-            this.btnJustify.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnJustify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnJustify.Location = new System.Drawing.Point(316, -7);
+            this.btnJustify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnJustify.FlatAppearance.BorderSize = 0;
+            this.btnJustify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnJustify.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnJustify.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJustify.IconSize = 28;
+            this.btnJustify.Location = new System.Drawing.Point(322, 10);
             this.btnJustify.Name = "btnJustify";
-            this.btnJustify.Size = new System.Drawing.Size(27, 43);
-            this.btnJustify.TabIndex = 0;
-            this.btnJustify.Text = "...";
+            this.btnJustify.Size = new System.Drawing.Size(28, 28);
+            this.btnJustify.TabIndex = 1;
+            this.btnJustify.UseVisualStyleBackColor = false;
+            this.btnJustify.Click += new System.EventHandler(this.btnJustify_Click);
             // 
             // UsCtr_Card
             // 
@@ -116,7 +124,6 @@
             this.Size = new System.Drawing.Size(361, 469);
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +135,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbName;
         private Guna.UI2.WinForms.Guna2Button btnSubscribe;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel btnJustify;
+        private FontAwesome.Sharp.IconButton btnJustify;
     }
 }

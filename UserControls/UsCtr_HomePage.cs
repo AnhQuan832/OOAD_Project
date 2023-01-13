@@ -23,7 +23,7 @@ namespace OOAD_Project
 
             for (int i = 0; i < DiscCard.Length; i++)
             {
-                DiscCard[i] = new UsCtr_Card(0);
+                DiscCard[i] = new UsCtr_Card(1);
                 pnCardView.Controls.Add(DiscCard[i]);
 
                 DiscCard[i].ItemImage = Properties.Resources.film_poster;
