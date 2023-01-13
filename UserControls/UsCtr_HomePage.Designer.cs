@@ -42,9 +42,9 @@
             this.pnCardView.BorderThickness = 2;
             this.pnCardView.Controls.Add(this.guna2HtmlLabel1);
             this.pnCardView.Location = new System.Drawing.Point(33, 38);
-            this.pnCardView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnCardView.Margin = new System.Windows.Forms.Padding(4);
             this.pnCardView.Name = "pnCardView";
-            this.pnCardView.Size = new System.Drawing.Size(1632, 619);
+            this.pnCardView.Size = new System.Drawing.Size(1632, 659);
             this.pnCardView.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -75,7 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.pnCardView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsCtr_HomePage";
             this.Size = new System.Drawing.Size(1692, 971);
             this.Load += new System.EventHandler(this.UsCtr_HomePage_Load);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOAD_Project.Forms;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -63,6 +64,14 @@ namespace OOAD_Project
                 btnSubscribe.FillColor = Color.FromArgb(57, 110, 176);
                 btnSubscribe.ForeColor = Color.FromArgb(255, 239, 214);
             }
+
+
+        }
+
+        private void btnJustify_Click(object sender, EventArgs e)
+        {
+            fEditComingDisc fEditComingDisc = new fEditComingDisc(lbName.Text, "");
+            fEditComingDisc.ShowDialog();
         }
     }
 }

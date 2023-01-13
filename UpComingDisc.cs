@@ -1,20 +1,37 @@
-﻿namespace OOAD_Project
+﻿using System.Collections.Generic;
+
+namespace OOAD_Project
 {
-    public class UpComingDisc : ISubject
+    public class UpComingDisc : IUpcomingDisc
     {
-        public void Attach(IObserver observer)
+        List<Customer> customers = new List<Customer>();
+        string discName;
+
+        public string DiscName
+        {
+            get { return discName; }
+            set { discName = value; }
+        }
+        public UpComingDisc(string discName)
+        {
+            this.discName = discName;
+        }
+        public void Attach(ICustomer observer)
         {
 
         }
 
-        public void Detach(IObserver observer)
+        public void Detach(ICustomer observer)
         {
 
         }
 
         public void Notify()
         {
-
+            foreach (Customer customer in customers)
+            {
+                customer.Update(this);
+            }
         }
     }
 }
