@@ -1,49 +1,45 @@
-﻿using System;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 
 namespace OOAD_Project
 {
     public class Customer : ICustomer
     {
-        string mailAddress;
-        string mailSubject;
-        string mailBody;
+        private string mailAddress;
 
-        public Customer(string email, string username, string discName)
+        public Customer(IUpcomingDisc upComingdisc, string email)
         {
             mailAddress = email;
-            this.mailSubject = discName + " is available in our store.";
-            this.mailBody = "Dear " + username + ",\n" + discName + " you subscribed has come. You can go to the store to rent it.\nBest regards,\nPQT Store";
+            upComingdisc.Attach(this);
         }
-        public void Update(IUpcomingDisc upcomingDisc)
+        public void Update(string message)
         {
-            SendEmail();
+            SendEmail(message);
         }
 
-        private void SendEmail()
+        private void SendEmail(string message)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+            //try
+            //{
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("bgxowptneyoklxgh");
-                mail.To.Add(mailAddress);
-                mail.Subject = mailSubject;
-                mail.IsBodyHtml = true;
-                mail.Body = mailBody;
+            mail.From = new MailAddress("discManagementApp@gmail.com");
+            mail.To.Add(mailAddress);
+            mail.Subject = message + " is available in our store.";
+            mail.IsBodyHtml = true;
+            mail.Body = "Dear Customer,\n" + message + " you subscribed has come. You can go to the store to rent it.\nBest regards,\nPQT Store"; ;
 
-                mail.Priority = MailPriority.High;
+            mail.Priority = MailPriority.High;
 
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("discManagementApp@gmail.com", "bgxowptneyoklxgh");
-                SmtpServer.EnableSsl = true;
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential("discManagementApp@gmail.com", "bgxowptneyoklxgh");
+            SmtpServer.EnableSsl = true;
 
-                SmtpServer.Send(mail);
-            }
-            catch (Exception ex)
-            {
-            }
+            SmtpServer.Send(mail);
+            //}
+            //catch (Exception ex)
+            //{
+            //}
 
         }
     }

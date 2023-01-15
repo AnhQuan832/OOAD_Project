@@ -51,15 +51,18 @@
             // 
             // lbName
             // 
+            this.lbName.AutoSize = false;
+            this.lbName.AutoSizeHeightOnly = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.lbName.Location = new System.Drawing.Point(64, 322);
+            this.lbName.Location = new System.Drawing.Point(14, 322);
             this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(71, 38);
+            this.lbName.Size = new System.Drawing.Size(336, 37);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Name";
+            this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSubscribe
             // 
@@ -125,7 +128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

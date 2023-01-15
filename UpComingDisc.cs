@@ -4,33 +4,30 @@ namespace OOAD_Project
 {
     public class UpComingDisc : IUpcomingDisc
     {
-        List<Customer> customers = new List<Customer>();
-        string discName;
+        private List<ICustomer> customers = new List<ICustomer>();
+        private string discName;
 
-        public string DiscName
-        {
-            get { return discName; }
-            set { discName = value; }
-        }
+        private string DiscName { get; set; }
+
         public UpComingDisc(string discName)
         {
             this.discName = discName;
         }
-        public void Attach(ICustomer observer)
+        public void Attach(ICustomer customer)
         {
-
+            customers.Add(customer);
         }
 
-        public void Detach(ICustomer observer)
+        public void Detach(ICustomer customer)
         {
-
+            customers.Remove(customer);
         }
 
         public void Notify()
         {
-            foreach (Customer customer in customers)
+            foreach (ICustomer customer in customers)
             {
-                customer.Update(this);
+                customer.Update(discName);
             }
         }
     }

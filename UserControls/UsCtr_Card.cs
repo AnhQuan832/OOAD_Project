@@ -29,8 +29,13 @@ namespace OOAD_Project
             {
                 btnJustify.Visible = false;
             }
+
         }
 
+        public void DisableButton()
+        {
+            btnSubscribe.Enabled = false;
+        }
         public Image ItemImage
         {
             get { return pbDisc.Image; }
@@ -70,7 +75,7 @@ namespace OOAD_Project
 
         private void btnJustify_Click(object sender, EventArgs e)
         {
-            fEditComingDisc fEditComingDisc = new fEditComingDisc(lbName.Text, "");
+            fEditComingDisc fEditComingDisc = new fEditComingDisc(lbName.Text);
             fEditComingDisc.ShowDialog();
         }
     }
