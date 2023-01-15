@@ -2,6 +2,6 @@
 {
     public interface ICustomer
     {
-        void Update(IUpcomingDisc upcomingDisc);
+        void Update(string message);
     }
 }
