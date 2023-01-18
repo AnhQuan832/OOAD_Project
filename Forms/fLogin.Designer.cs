@@ -137,7 +137,6 @@
             this.btnSignUp.Size = new System.Drawing.Size(215, 43);
             this.btnSignUp.TabIndex = 10;
             this.btnSignUp.Text = "Create account";
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnLogin
             // 
@@ -174,6 +173,7 @@
             this.btnShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnShowPassword.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnShowPassword.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.btnShowPassword.CheckedChanged += new System.EventHandler(this.btnShowPassword_CheckedChanged);
             // 
             // tbUsername
             // 
@@ -188,14 +188,14 @@
             this.tbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(0, 282);
+            this.tbUsername.Location = new System.Drawing.Point(4, 282);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.tbUsername.MaxLength = 20;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PasswordChar = '\0';
             this.tbUsername.PlaceholderText = "Username";
             this.tbUsername.SelectedText = "";
-            this.tbUsername.Size = new System.Drawing.Size(424, 60);
+            this.tbUsername.Size = new System.Drawing.Size(416, 60);
             this.tbUsername.TabIndex = 7;
             // 
             // tbPassword
@@ -211,7 +211,7 @@
             this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(0, 378);
+            this.tbPassword.Location = new System.Drawing.Point(4, 378);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.MaxLength = 20;
             this.tbPassword.Name = "tbPassword";
@@ -219,7 +219,7 @@
             this.tbPassword.PasswordChar = '•';
             this.tbPassword.PlaceholderText = "Password";
             this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(424, 60);
+            this.tbPassword.Size = new System.Drawing.Size(416, 60);
             this.tbPassword.TabIndex = 8;
             // 
             // pnSignUp
@@ -268,7 +268,6 @@
             this.btnBackToLogin.Size = new System.Drawing.Size(188, 43);
             this.btnBackToLogin.TabIndex = 10;
             this.btnBackToLogin.Text = "Back to Sign in";
-            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
             // 
             // btnCreate
             // 
@@ -287,7 +286,6 @@
             this.btnCreate.Size = new System.Drawing.Size(272, 67);
             this.btnCreate.TabIndex = 11;
             this.btnCreate.Text = "Create account";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnShowPasswordSU
             // 
@@ -305,7 +303,6 @@
             this.btnShowPasswordSU.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnShowPasswordSU.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnShowPasswordSU.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.btnShowPasswordSU.CheckedChanged += new System.EventHandler(this.btnShowPasswordSU_CheckedChanged);
             // 
             // tbFullnameSU
             // 
@@ -509,7 +506,6 @@
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.fLogin_Load);
             this.pnBackground.ResumeLayout(false);
             this.pnSignIn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

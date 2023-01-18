@@ -6,9 +6,16 @@ namespace OOAD_Project
     public partial class fMainPage : Form
 
     {
+        public fLogin FLogin { get; }
+
         public fMainPage()
         {
             InitializeComponent();
+        }
+
+        public fMainPage(fLogin fLogin)
+        {
+            FLogin = fLogin;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

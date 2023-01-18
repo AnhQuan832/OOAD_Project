@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="DataProvider.cs" />
     <Compile Include="Forms\fEditComingDisc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +108,7 @@
     <Compile Include="IUpcomingDisc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Process.cs" />
     <Compile Include="UserControls\ShopItem.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -1,10 +1,21 @@
-﻿using System;
+﻿using OOAD_Project.Properties;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace OOAD_Project
 {
     public partial class fLogin : Form
     {
+        public static String ID;
+        public static String acc;
+
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        SqlConnection con = new SqlConnection(SQLConnection.connectionString);
+
         public fLogin()
         {
             InitializeComponent();
@@ -15,13 +26,41 @@ namespace OOAD_Project
             Application.Exit();
         }
 
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fMainPage fMainPage = new fMainPage();
-            fMainPage.ShowDialog();
-            this.Close();
+            if (tbUsername.Text == "" || tbPassword.Text == "")
+            {
+                MessageBox.Show("Hãy điền đầy đủ thông tin!", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                con.Open();
+                string login = "SELECT * FROM nguoidung WHERE username= '" + tbUsername.Text.Trim() + "' and password= '" + tbPassword.Text.Trim() + "'";
+                cmd = new SqlCommand(login, con);
+                SqlDataReader dr = cmd.ExecuteReader();
 
+                if (dr.Read() == true)
+                {
+                    acc = tbUsername.Text;
+                    ID = SQLConnection.GetFieldValues("SELECT ID FROM USERS WHERE USER_ID = '" + acc + "'");
+
+                    this.Hide();
+                    fMainPage mainPage = new fMainPage(this);
+                    mainPage.ShowDialog();
+                    this.Close();
+                    tbUsername.Text = "";
+                    tbPassword.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu bị sai, mời nhập lại", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tbUsername.Text = "";
+                    tbPassword.Text = "";
+                    tbUsername.Focus();
+                }
+            }
+            con.Close();
         }
 
         private void btnShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -35,39 +74,6 @@ namespace OOAD_Project
                 tbPassword.PasswordChar = '•';
             }
         }
-
-
-
-        private void fLogin_Load(object sender, EventArgs e)
-        {
-            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-        }
-
-        private void btnShowPasswordSU_CheckedChanged(object sender, EventArgs e)
-        {
-            if (btnShowPasswordSU.Checked)
-            {
-                tbPasswordSU.PasswordChar = '\0';
-            }
-            else
-            {
-                tbPasswordSU.PasswordChar = '•';
-            }
-        }
-
-        private void btnBackToLogin_Click(object sender, EventArgs e)
-        {
-            pnSignIn.BringToFront();
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            //Create new account
-        }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            pnSignUp.BringToFront();
-        }
     }
+
 }
