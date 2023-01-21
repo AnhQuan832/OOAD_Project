@@ -1,5 +1,6 @@
 ﻿using OOAD_Project.Forms;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -9,7 +10,10 @@ namespace OOAD_Project
     public partial class UsCtr_Card : UserControl
     {
         bool isSubscribe = false;
-
+        int discID;
+        int userID;
+        SqlCommand cmd;
+        SqlConnection con = new SqlConnection(SQLConnection.connectionString);
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         public static extern IntPtr CreateRoundRectRgn
       (
@@ -20,7 +24,7 @@ namespace OOAD_Project
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
       );
-        public UsCtr_Card(int permission)
+        public UsCtr_Card(int permission, int userID, int discID)
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -29,7 +33,8 @@ namespace OOAD_Project
             {
                 btnJustify.Visible = false;
             }
-
+            this.discID = discID;
+            this.userID = userID;
         }
 
         public void DisableButton()
@@ -61,6 +66,12 @@ namespace OOAD_Project
                 btnSubscribe.BorderThickness = 2;
                 btnSubscribe.FillColor = Color.White;
                 btnSubscribe.ForeColor = Color.FromArgb(57, 110, 176);
+
+                con.Open();
+                string query = "insert into COMINGDISC values (" + discID + "," + userID + ")";
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
             }
             else
             {
@@ -68,6 +79,12 @@ namespace OOAD_Project
                 btnSubscribe.BorderThickness = 0;
                 btnSubscribe.FillColor = Color.FromArgb(57, 110, 176);
                 btnSubscribe.ForeColor = Color.FromArgb(255, 239, 214);
+
+                con.Open();
+                string query = "delete  from COMINGDISC where USER_ID = " + userID + "and DISC_ID = " + discID;
+                cmd = new SqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
             }
 
 
