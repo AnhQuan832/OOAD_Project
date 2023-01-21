@@ -127,7 +127,6 @@ D:\OOAD\OOAD\obj\Debug\OOAD_Project.csproj.CoreCompileInputs.cache
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.csproj.CopyComplete
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.exe
 D:\OOAD\OOAD\obj\Debug\OOAD_Project.pdb
-D:\OOAD\OOAD\obj\Debug\OOAD_Project.Forms.fEditComingDisc.resources
 D:\OOAD_Project\bin\Debug\OOAD_Project.exe.config
 D:\OOAD_Project\bin\Debug\OOAD_Project.exe
 D:\OOAD_Project\bin\Debug\OOAD_Project.pdb

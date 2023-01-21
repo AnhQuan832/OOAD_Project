@@ -27,7 +27,7 @@ namespace OOAD_Project
             mail.To.Add(mailAddress);
             mail.Subject = message + " is available in our store.";
             mail.IsBodyHtml = true;
-            mail.Body = "Dear Customer,\n" + message + " you subscribed has come. You can go to the store to rent it.\nBest regards,\nPQT Store"; ;
+            mail.Body = "<p>Dear Customer,<br>" + message + " you subscribed has come. You can go to the store to rent it.<br>Best regards,<br>PQT Store</p>"; ;
 
             mail.Priority = MailPriority.High;
 
