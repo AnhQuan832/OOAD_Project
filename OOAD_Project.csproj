@@ -72,12 +72,6 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
     <Compile Include="DataProvider.cs" />
-    <Compile Include="Forms\fEditComingDisc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\fEditComingDisc.Designer.cs">
-      <DependentUpon>fEditComingDisc.cs</DependentUpon>
-    </Compile>
     <Compile Include="ICustomer.cs" />
     <Compile Include="SQLConnection.cs" />
     <Compile Include="UpComingDisc.cs" />
@@ -183,9 +177,6 @@
     </Compile>
     <EmbeddedResource Include="Forms\fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fEditComingDisc.resx">
-      <DependentUpon>fEditComingDisc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
