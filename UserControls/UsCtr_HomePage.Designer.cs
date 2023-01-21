@@ -49,6 +49,7 @@
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
@@ -80,7 +81,6 @@
             this.Size = new System.Drawing.Size(1692, 971);
             this.Load += new System.EventHandler(this.UsCtr_HomePage_Load);
             this.pnCardView.ResumeLayout(false);
-            this.pnCardView.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

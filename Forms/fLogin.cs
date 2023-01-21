@@ -1,15 +1,12 @@
-﻿using OOAD_Project.Properties;
-using System;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace OOAD_Project
 {
     public partial class fLogin : Form
     {
-        public static String ID;
+        public static int ID;
         public static String acc;
 
         SqlDataAdapter da = new SqlDataAdapter();
@@ -26,7 +23,7 @@ namespace OOAD_Project
             Application.Exit();
         }
 
-        
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (tbUsername.Text == "" || tbPassword.Text == "")
@@ -36,14 +33,14 @@ namespace OOAD_Project
             else
             {
                 con.Open();
-                string login = "SELECT * FROM nguoidung WHERE username= '" + tbUsername.Text.Trim() + "' and password= '" + tbPassword.Text.Trim() + "'";
+                string login = "SELECT * FROM USERS WHERE user_name= '" + tbUsername.Text.Trim() + "' and user_password= '" + tbPassword.Text.Trim() + "'";
                 cmd = new SqlCommand(login, con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read() == true)
                 {
                     acc = tbUsername.Text;
-                    ID = SQLConnection.GetFieldValues("SELECT ID FROM USERS WHERE USER_ID = '" + acc + "'");
+                    ID = int.Parse(SQLConnection.GetFieldValues("SELECT USER_ID FROM USERS WHERE USER_NAME = '" + acc + "'"));
 
                     this.Hide();
                     fMainPage mainPage = new fMainPage(this);

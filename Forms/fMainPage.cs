@@ -6,17 +6,16 @@ namespace OOAD_Project
     public partial class fMainPage : Form
 
     {
-        public fLogin FLogin { get; }
-
-        public fMainPage()
+        UsCtr_HomePage usCtr_HomePage;
+        public fMainPage(fLogin login)
         {
             InitializeComponent();
+            usCtr_HomePage = new UsCtr_HomePage(fLogin.ID);
+            pnView.Controls.Add(usCtr_HomePage);
+            usCtr_HomePage.BringToFront();
         }
 
-        public fMainPage(fLogin fLogin)
-        {
-            FLogin = fLogin;
-        }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -63,11 +62,12 @@ namespace OOAD_Project
 
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            usCtr_HomePage2.BringToFront();
+            usCtr_HomePage.BringToFront();
         }
 
         private void btnUserProfile_Click(object sender, EventArgs e)
         {
+            usCtr_UserProfilecs3.BringToFront();
         }
     }
 }

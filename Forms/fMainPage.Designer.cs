@@ -40,17 +40,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ibtDX = new FontAwesome.Sharp.IconButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnUserProfile = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pnView = new Guna.UI2.WinForms.Guna2Panel();
-            this.usCtr_HomePage2 = new OOAD_Project.UsCtr_HomePage();
             this.shopView1 = new OOAD_Project.ShopView();
             this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
             this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
             this.usCtr_Manage1 = new OOAD_Project.UsCtr_Manage();
             this.usCtr_UserProfilecs2 = new OOAD_Project.UsCtr_UserProfilecs();
+            this.usCtr_UserProfilecs3 = new OOAD_Project.UsCtr_UserProfilecs();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -258,25 +257,12 @@
             this.guna2Panel2.Controls.Add(this.btnUserProfile);
             this.guna2Panel2.Controls.Add(this.btnMinimize);
             this.guna2Panel2.Controls.Add(this.btnClose);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(249, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1691, 142);
             this.guna2Panel2.TabIndex = 6;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1123, 50);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(445, 60);
-            this.guna2HtmlLabel1.TabIndex = 8;
-            this.guna2HtmlLabel1.Text = "Welcome, user!";
             // 
             // btnUserProfile
             // 
@@ -328,23 +314,14 @@
             this.pnView.Controls.Add(this.usCtr_Order1);
             this.pnView.Controls.Add(this.usCtr_Cart1);
             this.pnView.Controls.Add(this.usCtr_Manage1);
-            this.pnView.Controls.Add(this.usCtr_HomePage2);
             this.pnView.Controls.Add(this.usCtr_UserProfilecs2);
+            this.pnView.Controls.Add(this.usCtr_UserProfilecs3);
             this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnView.Location = new System.Drawing.Point(249, 142);
             this.pnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnView.Name = "pnView";
             this.pnView.Size = new System.Drawing.Size(1691, 946);
             this.pnView.TabIndex = 7;
-            // 
-            // usCtr_HomePage2
-            // 
-            this.usCtr_HomePage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_HomePage2.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_HomePage2.Margin = new System.Windows.Forms.Padding(5);
-            this.usCtr_HomePage2.Name = "usCtr_HomePage2";
-            this.usCtr_HomePage2.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_HomePage2.TabIndex = 8;
             // 
             // shopView1
             // 
@@ -394,6 +371,16 @@
             this.usCtr_UserProfilecs2.Size = new System.Drawing.Size(1691, 946);
             this.usCtr_UserProfilecs2.TabIndex = 10;
             // 
+            // usCtr_UserProfilecs3
+            // 
+            this.usCtr_UserProfilecs3.BackColor = System.Drawing.Color.White;
+            this.usCtr_UserProfilecs3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usCtr_UserProfilecs3.Location = new System.Drawing.Point(0, 0);
+            this.usCtr_UserProfilecs3.Margin = new System.Windows.Forms.Padding(4);
+            this.usCtr_UserProfilecs3.Name = "usCtr_UserProfilecs3";
+            this.usCtr_UserProfilecs3.Size = new System.Drawing.Size(1691, 946);
+            this.usCtr_UserProfilecs3.TabIndex = 11;
+            // 
             // fMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,8 +427,8 @@
         private UsCtr_HomePage usCtr_HomePage2;
         private UsCtr_Manage usCtr_Manage1;
         private FontAwesome.Sharp.IconButton btnHome;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.PictureBox btnUserProfile;
         private UsCtr_UserProfilecs usCtr_UserProfilecs2;
+        private UsCtr_UserProfilecs usCtr_UserProfilecs3;
     }
 }
