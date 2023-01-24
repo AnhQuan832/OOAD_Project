@@ -18,7 +18,7 @@ namespace OOAD_Project
            int nWidthEllipse, // height of ellipse
            int nHeightEllipse // width of ellipse
        );
-
+        int itemID;
         public ShopItem()
         {
             InitializeComponent();
@@ -59,6 +59,11 @@ namespace OOAD_Project
             set { lbPrice.Text = value; }
         }
 
+        public int ItemID
+        {
+            get { return itemID; }
+            set { itemID = value; }
+        }
 
 
 

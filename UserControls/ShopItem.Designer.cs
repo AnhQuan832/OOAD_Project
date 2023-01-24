@@ -36,6 +36,7 @@
             this.lbPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbDisc
@@ -54,7 +55,7 @@
             // 
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbName.Location = new System.Drawing.Point(28, 300);
+            this.lbName.Location = new System.Drawing.Point(11, 301);
             this.lbName.Margin = new System.Windows.Forms.Padding(4);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(71, 38);
@@ -64,11 +65,11 @@
             // lbGenre
             // 
             this.lbGenre.BackColor = System.Drawing.Color.Transparent;
-            this.lbGenre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbGenre.Location = new System.Drawing.Point(28, 347);
+            this.lbGenre.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbGenre.Location = new System.Drawing.Point(11, 343);
             this.lbGenre.Margin = new System.Windows.Forms.Padding(4);
             this.lbGenre.Name = "lbGenre";
-            this.lbGenre.Size = new System.Drawing.Size(40, 21);
+            this.lbGenre.Size = new System.Drawing.Size(49, 25);
             this.lbGenre.TabIndex = 1;
             this.lbGenre.Text = "Genre";
             // 
@@ -96,7 +97,7 @@
             // 
             this.lbPrice.BackColor = System.Drawing.Color.Transparent;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbPrice.Location = new System.Drawing.Point(28, 380);
+            this.lbPrice.Location = new System.Drawing.Point(11, 376);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(4);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(54, 34);
@@ -108,6 +109,9 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.lbPrice);
+            this.guna2Panel1.Controls.Add(this.lbName);
+            this.guna2Panel1.Controls.Add(this.lbGenre);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -119,18 +123,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.guna2CircleButton1);
-            this.Controls.Add(this.lbGenre);
-            this.Controls.Add(this.lbName);
             this.Controls.Add(this.pbDisc);
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShopItem";
             this.Size = new System.Drawing.Size(320, 431);
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
