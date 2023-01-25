@@ -8,13 +8,11 @@ namespace OOAD_Project
     public partial class UsCtr_HomePage : UserControl
     {
         string positon;
-        int userID;
         SqlCommand cmd;
         SqlConnection con = new SqlConnection(SQLConnection.connectionString);
-        public UsCtr_HomePage(int ID)
+        public UsCtr_HomePage()
         {
             InitializeComponent();
-            userID = ID;
             GetPermission();
             LoadCard();
         }
@@ -22,7 +20,7 @@ namespace OOAD_Project
         private void GetPermission()
         {
             con.Open();
-            string loadDT = "select POSTION_NAME from USERS, POSITION where USERS.USER_POSITON = POSITION.POSITION_ID and USER_ID = '" + userID + "'";
+            string loadDT = "select POSTION_NAME from USERS, POSITION where USERS.USER_POSITON = POSITION.POSITION_ID and USER_ID = '" + fLogin.ID + "'";
             SqlCommand cmd = new SqlCommand(loadDT, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
@@ -74,7 +72,7 @@ namespace OOAD_Project
 
             for (int i = 0; i < 4; i++)
             {
-                DiscCard[i] = new UsCtr_Card(permision, userID, discID[i]);
+                DiscCard[i] = new UsCtr_Card(permision, discID[i]);
                 pnCardView.Controls.Add(DiscCard[i]);
 
                 //DiscCard[i].ItemImage = Properties.Resources.film_poster;

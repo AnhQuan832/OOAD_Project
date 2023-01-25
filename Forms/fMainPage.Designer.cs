@@ -44,17 +44,10 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pnView = new Guna.UI2.WinForms.Guna2Panel();
-            this.shopView1 = new OOAD_Project.ShopView();
-            this.usCtr_Order1 = new OOAD_Project.UsCtr_Order();
-            this.usCtr_Cart1 = new OOAD_Project.UsCtr_Cart();
-            this.usCtr_Manage1 = new OOAD_Project.UsCtr_Manage();
-            this.usCtr_UserProfilecs2 = new OOAD_Project.UsCtr_UserProfilecs();
-            this.usCtr_UserProfilecs3 = new OOAD_Project.UsCtr_UserProfilecs();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).BeginInit();
-            this.pnView.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -210,7 +203,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pictureBox1
             // 
@@ -249,7 +242,6 @@
             this.ibtDX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtDX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtDX.UseVisualStyleBackColor = false;
-            this.ibtDX.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // guna2Panel2
             // 
@@ -272,7 +264,6 @@
             this.btnUserProfile.Size = new System.Drawing.Size(97, 86);
             this.btnUserProfile.TabIndex = 7;
             this.btnUserProfile.TabStop = false;
-            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
             // btnMinimize
             // 
@@ -289,6 +280,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(36, 31);
             this.btnMinimize.TabIndex = 6;
             this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnClose
             // 
@@ -310,76 +302,12 @@
             // pnView
             // 
             this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnView.Controls.Add(this.shopView1);
-            this.pnView.Controls.Add(this.usCtr_Order1);
-            this.pnView.Controls.Add(this.usCtr_Cart1);
-            this.pnView.Controls.Add(this.usCtr_Manage1);
-            this.pnView.Controls.Add(this.usCtr_UserProfilecs2);
-            this.pnView.Controls.Add(this.usCtr_UserProfilecs3);
             this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnView.Location = new System.Drawing.Point(249, 142);
             this.pnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnView.Name = "pnView";
             this.pnView.Size = new System.Drawing.Size(1691, 946);
             this.pnView.TabIndex = 7;
-            // 
-            // shopView1
-            // 
-            this.shopView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shopView1.Location = new System.Drawing.Point(0, 0);
-            this.shopView1.Margin = new System.Windows.Forms.Padding(5);
-            this.shopView1.Name = "shopView1";
-            this.shopView1.Size = new System.Drawing.Size(1691, 946);
-            this.shopView1.TabIndex = 5;
-            // 
-            // usCtr_Order1
-            // 
-            this.usCtr_Order1.BackColor = System.Drawing.Color.White;
-            this.usCtr_Order1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_Order1.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_Order1.Margin = new System.Windows.Forms.Padding(5);
-            this.usCtr_Order1.Name = "usCtr_Order1";
-            this.usCtr_Order1.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_Order1.TabIndex = 2;
-            // 
-            // usCtr_Cart1
-            // 
-            this.usCtr_Cart1.BackColor = System.Drawing.Color.White;
-            this.usCtr_Cart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_Cart1.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_Cart1.Margin = new System.Windows.Forms.Padding(5);
-            this.usCtr_Cart1.Name = "usCtr_Cart1";
-            this.usCtr_Cart1.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_Cart1.TabIndex = 1;
-            // 
-            // usCtr_Manage1
-            // 
-            this.usCtr_Manage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_Manage1.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_Manage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usCtr_Manage1.Name = "usCtr_Manage1";
-            this.usCtr_Manage1.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_Manage1.TabIndex = 9;
-            // 
-            // usCtr_UserProfilecs2
-            // 
-            this.usCtr_UserProfilecs2.BackColor = System.Drawing.Color.White;
-            this.usCtr_UserProfilecs2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_UserProfilecs2.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_UserProfilecs2.Margin = new System.Windows.Forms.Padding(4);
-            this.usCtr_UserProfilecs2.Name = "usCtr_UserProfilecs2";
-            this.usCtr_UserProfilecs2.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_UserProfilecs2.TabIndex = 10;
-            // 
-            // usCtr_UserProfilecs3
-            // 
-            this.usCtr_UserProfilecs3.BackColor = System.Drawing.Color.White;
-            this.usCtr_UserProfilecs3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usCtr_UserProfilecs3.Location = new System.Drawing.Point(0, 0);
-            this.usCtr_UserProfilecs3.Margin = new System.Windows.Forms.Padding(4);
-            this.usCtr_UserProfilecs3.Name = "usCtr_UserProfilecs3";
-            this.usCtr_UserProfilecs3.Size = new System.Drawing.Size(1691, 946);
-            this.usCtr_UserProfilecs3.TabIndex = 11;
             // 
             // fMainPage
             // 
@@ -394,12 +322,10 @@
             this.Name = "fMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMainPage";
-            this.Load += new System.EventHandler(this.fMainPage_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnUserProfile)).EndInit();
-            this.pnView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,5 +356,9 @@
         private System.Windows.Forms.PictureBox btnUserProfile;
         private UsCtr_UserProfilecs usCtr_UserProfilecs2;
         private UsCtr_UserProfilecs usCtr_UserProfilecs3;
+        private UsCtr_Manage usCtr_Manage;
+        private UsCtr_Order usCtr_Order;
+        private UsCtr_Cart usCtr_Cart;
+        private ShopView shopView;
     }
 }
