@@ -12,7 +12,6 @@ namespace OOAD_Project
         bool isSubscribe = false;
         bool isClick = false;
         int discID;
-        int userID;
         bool isEmpty = false;
         SqlCommand cmd;
         SqlDataAdapter da = new SqlDataAdapter();
@@ -28,7 +27,7 @@ namespace OOAD_Project
           int nWidthEllipse, // height of ellipse
           int nHeightEllipse // width of ellipse
       );
-        public UsCtr_Card(int permission, int userID, int discID)
+        public UsCtr_Card(int permission, int discID)
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -38,7 +37,6 @@ namespace OOAD_Project
                 btnJustify.Visible = false;
             }
             this.discID = discID;
-            this.userID = userID;
             cbDiscName.Visible = false;
         }
 
@@ -73,7 +71,7 @@ namespace OOAD_Project
                 btnSubscribe.ForeColor = Color.FromArgb(57, 110, 176);
 
                 con.Open();
-                string query = "insert into COMINGDISC values (" + discID + "," + userID + ")";
+                string query = "insert into COMINGDISC values (" + discID + "," + fLogin.ID + ")";
                 cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -86,7 +84,7 @@ namespace OOAD_Project
                 btnSubscribe.ForeColor = Color.FromArgb(255, 239, 214);
 
                 con.Open();
-                string query = "delete  from COMINGDISC where USER_ID = " + userID + "and DISC_ID = " + discID;
+                string query = "delete  from COMINGDISC where USER_ID = " + fLogin.ID + "and DISC_ID = " + discID;
                 cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
