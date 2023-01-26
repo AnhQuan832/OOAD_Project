@@ -71,6 +71,16 @@ namespace OOAD_Project
                 tbPassword.PasswordChar = '•';
             }
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            pnSignUp.BringToFront();
+        }
+
+        private void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            pnSignIn.BringToFront();
+        }
     }
 
 }

@@ -242,6 +242,7 @@
             this.ibtDX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtDX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtDX.UseVisualStyleBackColor = false;
+            this.ibtDX.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // guna2Panel2
             // 
