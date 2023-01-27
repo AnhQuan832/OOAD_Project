@@ -32,7 +32,7 @@
             this.pbDisc = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbGenre = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnAddToCart = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lbPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
@@ -73,25 +73,26 @@
             this.lbGenre.TabIndex = 1;
             this.lbGenre.Text = "Genre";
             // 
-            // guna2CircleButton1
+            // btnAddToCart
             // 
-            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.Location = new System.Drawing.Point(247, 364);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(44, 40);
-            this.guna2CircleButton1.TabIndex = 2;
-            this.guna2CircleButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2CircleButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
+            this.btnAddToCart.Location = new System.Drawing.Point(247, 364);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddToCart.Size = new System.Drawing.Size(44, 40);
+            this.btnAddToCart.TabIndex = 2;
+            this.btnAddToCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAddToCart.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // lbPrice
             // 
@@ -123,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2CircleButton1);
+            this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.pbDisc);
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -141,7 +142,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbDisc;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbName;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbGenre;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnAddToCart;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbPrice;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }

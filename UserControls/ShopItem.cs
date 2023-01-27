@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -8,6 +9,9 @@ namespace OOAD_Project
 {
     public partial class ShopItem : UserControl
     {
+        SqlCommand cmd = new SqlCommand();
+        SqlConnection con = new SqlConnection(SQLConnection.connectionString);
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         public static extern IntPtr CreateRoundRectRgn
        (
@@ -65,7 +69,52 @@ namespace OOAD_Project
             set { itemID = value; }
         }
 
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+            if (CheckExistingDisc())
+            {
+                AddExistingDisc();
+            }
+            else
+            {
+                AddNewDisc();
+            }
+        }
 
+        private void AddNewDisc()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into CART_DETAIL (USER_ID, DISC_ID, AMOUNT) " +
+                                            "values (" + fLogin.ID + ", " + itemID + ", " + 1 + ") ", con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Added to cart", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();
+        }
 
+        private void AddExistingDisc()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update CART_DETAIL set AMOUNT = AMOUNT + " + 1 +
+                                            " where USER_ID = " + fLogin.ID + " and DISC_ID = " + ItemID, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Added to cart", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();
+        }
+
+        private bool CheckExistingDisc()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from CART_DETAIL where USER_ID = " + fLogin.ID + " and DISC_ID = " + ItemID, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                dr.Close();
+                con.Close();
+                return true;
+            }
+            dr.Close();
+            con.Close();
+            return false;
+        }
     }
 }
