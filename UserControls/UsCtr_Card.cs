@@ -71,7 +71,7 @@ namespace OOAD_Project
                 btnSubscribe.ForeColor = Color.FromArgb(57, 110, 176);
 
                 con.Open();
-                string query = "insert into COMINGDISC values (" + discID + "," + fLogin.ID + ")";
+                string query = "insert into SUBSCRIBE values (" + discID + "," + fLogin.ID + ")";
                 cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -84,7 +84,7 @@ namespace OOAD_Project
                 btnSubscribe.ForeColor = Color.FromArgb(255, 239, 214);
 
                 con.Open();
-                string query = "delete  from COMINGDISC where USER_ID = " + fLogin.ID + "and DISC_ID = " + discID;
+                string query = "delete  from SUBSCRIBE where USER_ID = " + fLogin.ID + "and DISC_ID = " + discID;
                 cmd = new SqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -111,19 +111,7 @@ namespace OOAD_Project
                 lbName.Text = cbDiscName.SelectedValue.ToString();
                 btnSubscribe.Enabled = true;
 
-                con.Open();
-                string loadDT = "select DISC_ID from DISC where DISC_NAME = '" + lbName.Text + "'";
-                SqlCommand cmd = new SqlCommand(loadDT, con);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        discID = (int)reader["DISC_ID"];
-                    }
-                    reader.Close();
-                }
-                con.Close();
+                UpdateComingDisc();
             }
 
         }
@@ -155,7 +143,7 @@ namespace OOAD_Project
             UpComingDisc upComingDisc = new UpComingDisc(lbName.Text);
 
             con.Open();
-            string query = "select USER_MAIL from COMINGDISC, DISC, USERS where DISC.DISC_ID = COMINGDISC.DISC_ID and USERS.USER_ID = COMINGDISC.USER_ID and DISC_NAME = '" + lbName.Text + "'";
+            string query = "select USER_MAIL from SUBSCRIBE, DISC, USERS where DISC.DISC_ID = SUBSCRIBE.DISC_ID and USERS.USER_ID = SUBSCRIBE.USER_ID and DISC_NAME = '" + lbName.Text + "'";
             cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader != null)
@@ -171,9 +159,10 @@ namespace OOAD_Project
 
         private void UpdateComingDisc()
         {
-            string discID = "";
+            String discID = "";
+            String discName = cbDiscName.GetItemText(cbDiscName.SelectedItem);
             con.Open();
-            string query = "select DISC_ID from DISC where DISC_NAME = '" + cbDiscName.SelectedItem.ToString() + "'";
+            string query = "select DISC_ID from DISC where DISC_NAME = '" + discName + "'";
             cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader != null)
@@ -187,7 +176,7 @@ namespace OOAD_Project
 
             con.Open();
             cmd = con.CreateCommand();
-            cmd.CommandText = "insert into COMINGDISC values(" + discID + ",null)";
+            cmd.CommandText = "insert into COMINGDISC values(" + discID + ")";
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -195,7 +184,7 @@ namespace OOAD_Project
         {
             string discID = "";
             con.Open();
-            string query = "select distinct(COMINGDISC.DISC_ID) from COMINGDISC, DISC where COMINGDISC.DISC_ID = DISC.DISC_ID and DISC_NAME = '" + lbName.Text + "'";
+            string query = "select distinct(SUBSCRIBE.DISC_ID) from SUBSCRIBE, DISC where SUBSCRIBE.DISC_ID = DISC.DISC_ID and DISC_NAME = '" + lbName.Text + "'";
             cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader != null)
@@ -209,7 +198,9 @@ namespace OOAD_Project
 
             con.Open();
             cmd = con.CreateCommand();
-            cmd.CommandText = "delete  from COMINGDISC where DISC_ID = " + discID;
+            cmd.CommandText = "delete from SUBSCRIBE where DISC_ID = " + discID;
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "delete from COMINGDISC where DISC_ID = " + discID;
             cmd.ExecuteNonQuery();
             con.Close();
         }
