@@ -85,10 +85,8 @@ D:\OOAD\Project\obj\Debug\OOAD_Project.DiscCard.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_HomePage.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Statistic.resources
 D:\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_UserProfilecs.resources
-D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.DiscCard.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.fChangePassword.resources
 D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UsCtr_Card.resources
-D:\BaiTap\Nam3\HK1\OOAD\Project\obj\Debug\OOAD_Project.UssCtr_Statistic.resources
 D:\OOAD\OOAD\bin\Debug\OOAD_Project.exe.config
 D:\OOAD\OOAD\bin\Debug\OOAD_Project.exe
 D:\OOAD\OOAD\bin\Debug\OOAD_Project.pdb
@@ -165,3 +163,4 @@ D:\OOAD_Project\obj\Debug\OOAD_Project.csproj.CoreCompileInputs.cache
 D:\OOAD_Project\obj\Debug\OOAD_Project.csproj.CopyComplete
 D:\OOAD_Project\obj\Debug\OOAD_Project.exe
 D:\OOAD_Project\obj\Debug\OOAD_Project.pdb
+D:\BaiTap\Nam3\HK1\OOAD\project\obj\Debug\OOAD_Project.UsCtr_Manage.resources
