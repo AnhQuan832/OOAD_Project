@@ -28,7 +28,7 @@ namespace OOAD_Project
         {
             if (tbUsername.Text == "" || tbPassword.Text == "")
             {
-                MessageBox.Show("Hãy điền đầy đủ thông tin!", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill out the information!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -51,9 +51,7 @@ namespace OOAD_Project
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu bị sai, mời nhập lại", "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tbUsername.Text = "";
-                    tbPassword.Text = "";
+                    MessageBox.Show("Incorrect information", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbUsername.Focus();
                 }
             }

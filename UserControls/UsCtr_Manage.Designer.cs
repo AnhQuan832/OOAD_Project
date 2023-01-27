@@ -46,6 +46,10 @@
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.Staff = new System.Windows.Forms.TabPage();
             this.gvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAddStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
@@ -55,9 +59,11 @@
             this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbMail = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.Label();
             this.tbIDnum = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -110,12 +116,6 @@
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.tbEmail = new System.Windows.Forms.Label();
-            this.tbMail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2TabControl1.SuspendLayout();
             this.Staff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStaff)).BeginInit();
@@ -259,6 +259,49 @@
             this.gvStaff.ThemeStyle.RowsStyle.Height = 70;
             this.gvStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Id.DataPropertyName = "USER_NAME";
+            this.Id.FillWeight = 291.8782F;
+            this.Id.HeaderText = "Username";
+            this.Id.MinimumWidth = 150;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 200;
+            // 
+            // Disc_Name
+            // 
+            this.Disc_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Disc_Name.DataPropertyName = "USER_FULLNAME";
+            this.Disc_Name.FillWeight = 191.0627F;
+            this.Disc_Name.HeaderText = "Full Name";
+            this.Disc_Name.MinimumWidth = 6;
+            this.Disc_Name.Name = "Disc_Name";
+            this.Disc_Name.ReadOnly = true;
+            this.Disc_Name.Width = 230;
+            // 
+            // Price_day
+            // 
+            this.Price_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price_day.DataPropertyName = "USER_PHONE";
+            this.Price_day.FillWeight = 8.529577F;
+            this.Price_day.HeaderText = "Phone Number";
+            this.Price_day.MinimumWidth = 6;
+            this.Price_day.Name = "Price_day";
+            this.Price_day.ReadOnly = true;
+            this.Price_day.Width = 200;
+            // 
+            // Position
+            // 
+            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Position.DataPropertyName = "POSITION_NAME";
+            this.Position.HeaderText = "Position";
+            this.Position.MinimumWidth = 6;
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.Width = 125;
             // 
             // guna2Panel1
             // 
@@ -448,6 +491,31 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "ID Number";
             // 
+            // tbMail
+            // 
+            this.tbMail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.tbMail.BorderRadius = 10;
+            this.tbMail.BorderThickness = 2;
+            this.tbMail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbMail.DefaultText = "";
+            this.tbMail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbMail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbMail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbMail.Location = new System.Drawing.Point(30, 451);
+            this.tbMail.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.tbMail.PasswordChar = '\0';
+            this.tbMail.PlaceholderText = "";
+            this.tbMail.SelectedText = "";
+            this.tbMail.ShadowDecoration.BorderRadius = 200;
+            this.tbMail.Size = new System.Drawing.Size(536, 50);
+            this.tbMail.TabIndex = 3;
+            // 
             // tbFullname
             // 
             this.tbFullname.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
@@ -496,6 +564,18 @@
             this.label4.Size = new System.Drawing.Size(177, 32);
             this.label4.TabIndex = 4;
             this.label4.Text = "Phone Number";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.AutoSize = true;
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tbEmail.Location = new System.Drawing.Point(35, 412);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(71, 32);
+            this.tbEmail.TabIndex = 4;
+            this.tbEmail.Text = "Email";
             // 
             // tbIDnum
             // 
@@ -1497,86 +1577,6 @@
             this.cartesianChart1.Size = new System.Drawing.Size(1623, 621);
             this.cartesianChart1.TabIndex = 7;
             this.cartesianChart1.Text = "cartesianChart1";
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.AutoSize = true;
-            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbEmail.Location = new System.Drawing.Point(35, 412);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(71, 32);
-            this.tbEmail.TabIndex = 4;
-            this.tbEmail.Text = "Email";
-            // 
-            // tbMail
-            // 
-            this.tbMail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.tbMail.BorderRadius = 10;
-            this.tbMail.BorderThickness = 2;
-            this.tbMail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbMail.DefaultText = "";
-            this.tbMail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbMail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbMail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbMail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbMail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMail.Location = new System.Drawing.Point(30, 451);
-            this.tbMail.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.tbMail.Name = "tbMail";
-            this.tbMail.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.tbMail.PasswordChar = '\0';
-            this.tbMail.PlaceholderText = "";
-            this.tbMail.SelectedText = "";
-            this.tbMail.ShadowDecoration.BorderRadius = 200;
-            this.tbMail.Size = new System.Drawing.Size(536, 50);
-            this.tbMail.TabIndex = 3;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Id.DataPropertyName = "USER_NAME";
-            this.Id.FillWeight = 291.8782F;
-            this.Id.HeaderText = "Username";
-            this.Id.MinimumWidth = 150;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 200;
-            // 
-            // Disc_Name
-            // 
-            this.Disc_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Disc_Name.DataPropertyName = "USER_FULLNAME";
-            this.Disc_Name.FillWeight = 191.0627F;
-            this.Disc_Name.HeaderText = "Full Name";
-            this.Disc_Name.MinimumWidth = 6;
-            this.Disc_Name.Name = "Disc_Name";
-            this.Disc_Name.ReadOnly = true;
-            this.Disc_Name.Width = 230;
-            // 
-            // Price_day
-            // 
-            this.Price_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price_day.DataPropertyName = "USER_PHONE";
-            this.Price_day.FillWeight = 8.529577F;
-            this.Price_day.HeaderText = "Phone Number";
-            this.Price_day.MinimumWidth = 6;
-            this.Price_day.Name = "Price_day";
-            this.Price_day.ReadOnly = true;
-            this.Price_day.Width = 200;
-            // 
-            // Position
-            // 
-            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Position.DataPropertyName = "POSITION_NAME";
-            this.Position.HeaderText = "Position";
-            this.Position.MinimumWidth = 6;
-            this.Position.Name = "Position";
-            this.Position.ReadOnly = true;
-            this.Position.Width = 125;
             // 
             // UsCtr_Manage
             // 
