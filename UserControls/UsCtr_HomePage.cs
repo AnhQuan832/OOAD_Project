@@ -20,14 +20,14 @@ namespace OOAD_Project
         private void GetPermission()
         {
             con.Open();
-            string loadDT = "select POSTION_NAME from USERS, POSITION where USERS.USER_POSITON = POSITION.POSITION_ID and USER_ID = '" + fLogin.ID + "'";
+            string loadDT = "select POSITION_NAME from USERS, POSITION where USERS.USER_POSITION = POSITION.POSITION_ID and USER_ID = '" + fLogin.ID + "'";
             SqlCommand cmd = new SqlCommand(loadDT, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    positon = reader["POSTION_NAME"].ToString();
+                    positon = reader["POSITION_NAME"].ToString();
                 }
                 reader.Close();
             }

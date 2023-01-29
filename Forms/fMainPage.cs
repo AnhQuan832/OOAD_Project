@@ -38,12 +38,12 @@ namespace OOAD_Project
         private void SetVisibleMenu()
         {
             con.Open();
-            string getName = "SELECT POSTION_NAME  FROM users, POSITION WHERE users.USER_POSITON = POSITION.POSITION_ID and USER_ID = " + fLogin.ID;
+            string getName = "SELECT POSITION_NAME  FROM users, POSITION WHERE users.USER_POSITION = POSITION.POSITION_ID and USER_ID = " + fLogin.ID;
             SqlDataAdapter da = new SqlDataAdapter(getName, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             con.Close();
-            string name = dt.Rows[0]["POSTION_NAME"].ToString().Trim();
+            string name = dt.Rows[0]["POSITION_NAME"].ToString().Trim();
             if (name.CompareTo("Customer") == 0)
             {
                 btnOrder.Visible = false;

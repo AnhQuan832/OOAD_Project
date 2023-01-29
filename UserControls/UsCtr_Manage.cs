@@ -11,11 +11,17 @@ namespace OOAD_Project
         SqlCommand cmd;
         SqlConnection con = new SqlConnection(SQLConnection.connectionString);
         SqlDataAdapter da = new SqlDataAdapter();
+        DataTable dtProducer = new DataTable();
+        DataTable dtGenre = new DataTable();
+
         public UsCtr_Manage()
         {
             InitializeComponent();
             LoadChart();
-            LoadData();
+            LoadDataStaff();
+            LoadDataDisc();
+            LoadDataDiscImport();
+            LoadDataToComboboxDisc();
         }
 
         private void LoadChart()
@@ -53,15 +59,15 @@ namespace OOAD_Project
 
         private void btnAddStaff_Click(object sender, System.EventArgs e)
         {
-            if (tbFullname.Text == "" || tbUsername.Text == ""
-                || tbPassword.Text == "" || tbIDnum.Text == "" || tbPhonenum.Text == ""
-                )
+            if (tbMail.Text == "" || tbUsername.Text == ""
+                || tbPassword.Text == "" || tbIDnum.Text == "" || tbPhonenum.Text == "" || tbAddress.Text == "")
             {
-                MessageBox.Show("Please fill out information!", "Failed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                messageBox.Caption = "Please fill out the information";
+                messageBox.Show();
             }
             else
             {
+                int pos = GetPositionID(cbPosition.SelectedItem.ToString());
                 con.Open();
                 string check = "SELECT USER_NAME FROM USERS WHERE USER_NAME = '" + tbUsername.Text.Trim() + "'";
                 cmd = new SqlCommand(check, con);
@@ -69,34 +75,37 @@ namespace OOAD_Project
 
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Username is exist!", "Failed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    messageBox.Caption = "Username is existed!\nTry other username!";
+                    messageBox.Show();
                 }
                 else
                 {
                     con.Close();
-                    string position = "100" + (cbPosition.SelectedIndex + 1).ToString();
                     con.Open();
-                    string register = "INSERT INTO USERS (USER_NAME,USER_PASSWORD,USER_MAIL,USER_ID_NUMBER,USER_PHONE,USER_POSITON) " +
-                        "VALUES (N'" + tbUsername.Text.Trim() + "','" + tbPassword.Text.Trim() + "','" +
-                           tbMail.Text + "'"
-                        + ",N'" + tbIDnum.Text + "',N'" + tbPhonenum.Text + "'," + position + ")";
+                    string register = "INSERT INTO USERS (USER_NAME,USER_PASSWORD,USER_FULLNAME, USER_MAIL,USER_ID_NUMBER,USER_PHONE,USER_POSITION, USER_ADDRESS) " +
+                        "VALUES (N'" + tbUsername.Text.Trim() + "','" + tbPassword.Text.Trim() + "','" + tbFullname.Text.Trim() + "','" +
+                           tbFullname.Text.Trim() + "'"
+                        + ",N'" + tbIDnum.Text.Trim() + "',N'" + tbPhonenum.Text + "'," + pos + ",N'" + tbAddress.Text.Trim() + "')";
                     cmd = new SqlCommand(register, con);
                     cmd.ExecuteNonQuery();
-                    con.Close();
 
-                    MessageBox.Show("Account was created!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    messageBox.Caption = "Create new account successfully";
+                    messageBox.Show();
                 }
 
                 con.Close();
-                LoadData();
+                LoadDataStaff();
             }
         }
 
-        private void LoadData()
+        private void LoadDataStaff()
         {
+            if (fLogin.permission != "Admin")
+            {
+                btnAddStaff.Enabled = false;
+            }
             con.Open();
-            string sql = "select USER_NAME, USER_FULLNAME, USER_PHONE, POSTION_NAME from USERS, POSITION where USERS.USER_POSITON = POSITION.POSITION_ID and POSITION_ID = 1001 or POSITION_ID = 1002";
+            string sql = "select USER_NAME, USER_FULLNAME, USER_PHONE, POSITION_NAME from USERS, POSITION where USERS.USER_POSITION = POSITION.POSITION_ID and POSITION_NAME <> 'Customer'";
             cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
             da = new SqlDataAdapter(cmd);
@@ -104,6 +113,77 @@ namespace OOAD_Project
             da.Fill(dt);
             con.Close();
             gvStaff.DataSource = dt;
+
+
+        }
+
+        private int GetPositionID(string position)
+        {
+            int pos = 0;
+            cbPosition.SelectedItem.ToString();
+            con.Open();
+            string loadDT = "select POSITION_ID from POSITION where POSITION_NAME = '" + position + "'";
+            SqlCommand cmd = new SqlCommand(loadDT, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    pos = (int)reader["POSITION_ID"];
+                }
+                reader.Close();
+            }
+            con.Close();
+            return pos;
+        }
+
+        private void LoadDataDiscImport()
+        {
+            con.Open();
+            string sql = "select DISC_ID, DISC_NAME, DISC_INSTOCK, DISC_PRICE from DISC";
+            cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            gvListDisc.DataSource = dt;
+        }
+
+        private void LoadDataDisc()
+        {
+            con.Open();
+            string sql = "select DISC_ID, DISC_NAME, PRODUCER_NAME, GENRE_NAME, DISC_PRICE from DISC, PRODUCER, GENRE " +
+                            "where DISC.DISC_PRODUCER = PRODUCER.PRODUCER_ID and DISC.DISC_GENRE = GENRE.GENRE_ID";
+            cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            gvDisc.DataSource = dt;
+        }
+
+        private void LoadDataToComboboxDisc()
+        {
+            con.Open();
+            da = new SqlDataAdapter("select PRODUCER_NAME from PRODUCER", con);
+            da.Fill(dtProducer);
+            con.Close();
+
+            cbProducer.DataSource = dtProducer;
+            cbProducer.DisplayMember = "Producer name";
+            cbProducer.ValueMember = "PRODUCER_NAME";
+
+
+            con.Open();
+            da = new SqlDataAdapter("select GENRE_NAME from GENRE", con);
+            da.Fill(dtGenre);
+            con.Close();
+
+            cbGenre.DataSource = dtGenre;
+            cbGenre.DisplayMember = "Genre name";
+            cbGenre.ValueMember = "GENRE_NAME";
         }
     }
 }
