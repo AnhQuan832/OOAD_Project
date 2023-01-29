@@ -1,30 +1,67 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace OOAD_Project
 {
     public partial class UsCtr_Order : UserControl
     {
+        SqlConnection con = new SqlConnection(SQLConnection.connectionString);
+        SqlDataAdapter adapter;
+        public static DataTable dataTable;
+        BindingManagerBase current;
+        SqlCommand cmd;
         public UsCtr_Order()
         {
             InitializeComponent();
+            timer2.Start();
         }
 
         private void UsCtr_Order_Load(object sender, EventArgs e)
         {
-            this.dgvOrder.Rows.Add("0001", "Hoang Phuc", "18/05/2002", "16/06/2002", "30.000", "120.000", "Not Return");
-            this.dgvOrder.Rows.Add("0002", "Hoang Phuc", "18/05/2002", "16/06/2002", "30.000", "120.000", "Completed");
-            this.dgvOrder.Rows.Add("0003", "Hoang Phuc", "18/05/2002", "16/06/2002", "30.000", "120.000", "Ordering");
-            this.dgvOrder.Rows.Add("0004", "Hoang Phuc", "18/05/2002", "16/06/2002", "30.000", "120.000", "Not Return");
-            this.dgvOrder.Rows.Add("0005", "Hoang Phuc", "18/05/2002", "16/06/2002", "30.000", "120.000", "Not Return");
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            adapter = new SqlDataAdapter("select RENT_ID, USER_FULLNAME, RENT_DATE, DUE_DATE, RENT_DEPOSIT, TOTAL_PRICE, STATUS_NAME " +
+                                        "from RENT, USERS, STATUS " +
+                                         "where RENT.CUSTOMER_ID = USERS.USER_ID " +
+                                         "and RENT.STATUS = STATUS.STATUS_ID", con);
+
+            // Bộ phát sinh lệnh
+            SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
+
+            // Khởi tạo bảng 
+            dataTable = new DataTable();
+
+            // Gán dữ liệu cho dataTable
+            adapter.FillSchema(dataTable, SchemaType.Mapped);
+
+            // Lấy dữ liệu đổ vào dataTable 
+            adapter.Fill(dataTable);
+
+            // Gán dữ liệu nguồn cho DataGridView
+            gvOrder.DataSource = dataTable;
+
+            // Gán nguồn
+            current = BindingContext[dataTable];
         }
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
-            fOrderDetail fOrderDetail = new fOrderDetail(int.Parse(dgvOrder.Rows[e.RowIndex].Cells[0].Value.ToString()), dgvOrder.Rows[e.RowIndex].Cells[6].Value.ToString());
+            int ID = int.Parse(gvOrder.Rows[e.RowIndex].Cells[0].Value.ToString());
+            string type = gvOrder.Rows[e.RowIndex].Cells[6].Value.ToString();
+            fOrderDetail fOrderDetail = new fOrderDetail(ID, type);
             fOrderDetail.ShowDialog();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

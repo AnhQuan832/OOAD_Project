@@ -79,6 +79,15 @@ namespace OOAD_Project
             {
                 AddNewDisc();
             }
+            UpdateAmount();
+        }
+
+        private void UpdateAmount()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update DISC set DISC_INSTOCK = DISC_INSTOCK - 1 where DISC_ID = " + ItemID, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         private void AddNewDisc()

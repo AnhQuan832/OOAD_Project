@@ -62,11 +62,10 @@ namespace OOAD_Project
             Application.Exit();
         }
 
-
-
         private void btnStore_Click(object sender, EventArgs e)
         {
             Store.BringToFront();
+            Store.LoadAllProduct("");
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -85,11 +84,13 @@ namespace OOAD_Project
         private void btnCart_Click(object sender, EventArgs e)
         {
             Cart.BringToFront();
+            Cart.UpdateCart();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             Order.BringToFront();
+            Order.LoadData();
         }
 
         private void btnManage_Click(object sender, EventArgs e)

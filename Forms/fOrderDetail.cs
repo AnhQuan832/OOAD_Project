@@ -19,13 +19,16 @@ namespace OOAD_Project
             switch (type)
             {
                 case "Ordering":
-                    pnviewOrder.Controls.Add(new UsCtr_OrderDetail(ID));
+                    usCtr_OrderDetail.BringToFront();
+                    usCtr_OrderDetail.LoadData(ID);
                     break;
                 case "Completed":
-                    pnviewOrder.Controls.Add(new UsCtr_RentingDetail(ID));
+                    usCtr_ReturningDisc.BringToFront();
+                    usCtr_ReturningDisc.LoadData(ID, 0);
                     break;
                 default:
-                    pnviewOrder.Controls.Add(new UsCtr_ReturningDisc(ID));
+                    usCtr_ReturningDisc.BringToFront();
+                    usCtr_ReturningDisc.LoadData(ID, 1);
                     break;
             }
         }
