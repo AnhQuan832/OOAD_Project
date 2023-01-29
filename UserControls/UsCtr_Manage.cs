@@ -17,6 +17,8 @@ namespace OOAD_Project
         public UsCtr_Manage()
         {
             InitializeComponent();
+            btnImportDisc.Enabled = false;
+
             LoadChart();
             LoadDataStaff();
             LoadDataDisc();
@@ -153,7 +155,7 @@ namespace OOAD_Project
         private void LoadDataDisc()
         {
             con.Open();
-            string sql = "select DISC_ID, DISC_NAME, PRODUCER_NAME, GENRE_NAME, DISC_PRICE from DISC, PRODUCER, GENRE " +
+            string sql = "select DISC_ID, DISC_NAME, PRODUCER_NAME, GENRE_NAME, DISC_AMOUNT, DISC_PRICE from DISC, PRODUCER, GENRE " +
                             "where DISC.DISC_PRODUCER = PRODUCER.PRODUCER_ID and DISC.DISC_GENRE = GENRE.GENRE_ID";
             cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
@@ -184,6 +186,118 @@ namespace OOAD_Project
             cbGenre.DataSource = dtGenre;
             cbGenre.DisplayMember = "Genre name";
             cbGenre.ValueMember = "GENRE_NAME";
+        }
+
+        private void btnAddDisc_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckInputDisc())
+            {
+
+            }
+            else
+            {
+                int genreID = GetGenreID();
+                int producerID = GetProducerID();
+                con.Open();
+                string check = "SELECT DISC_NAME FROM DISC WHERE DISC_NAME = '" + tbDiscName.Text.Trim() + "'";
+                cmd = new SqlCommand(check, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    messageBox.Caption = tbDiscName.Text.Trim() + " is existing in store!";
+                    messageBox.Show();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+                    string register = "insert into DISC (DISC_NAME, DISC_AMOUNT,DISC_INSTOCK, DISC_PRICE,DISC_PRODUCER , DISC_GENRE)  values " +
+                            "('" + tbDiscName.Text.Trim() + "'," + nbAmount.Value + "," + nbAmount.Value + "," + tbRentPrice.Text + "," +
+                            producerID + "," + genreID + ")";
+                    cmd = new SqlCommand(register, con);
+                    cmd.ExecuteNonQuery();
+
+                }
+
+                con.Close();
+                LoadDataDisc();
+            }
+        }
+
+        private bool CheckInputDisc()
+        {
+            if (tbDiscName.Text == "")
+                return false;
+            if (cbProducer.Text == "")
+                return false;
+            if (tbRentPrice.Text == "")
+                return false;
+            if (cbGenre.Text == "")
+                return false;
+            return true;
+        }
+
+        private int GetGenreID()
+        {
+            int genreID = 0;
+            con.Open();
+            string check = "SELECT GENRE_ID FROM GENRE WHERE GENRE_NAME = '" + cbGenre.Text.Trim() + "'";
+            cmd = new SqlCommand(check, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    genreID = (int)dr["GENRE_ID"];
+                }
+                dr.Close();
+            }
+            con.Close();
+            return genreID;
+        }
+
+        private int GetProducerID()
+        {
+            int producerID = 0;
+            con.Open();
+            string check = "SELECT PRODUCER_ID FROM PRODUCER WHERE PRODUCER_NAME = '" + cbProducer.Text.Trim() + "'";
+            cmd = new SqlCommand(check, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    producerID = (int)dr["PRODUCER_ID"];
+                }
+                dr.Close();
+            }
+            con.Close();
+            return producerID;
+        }
+
+        private void gvListDisc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            tbDiscIDIm.Text = gvListDisc.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbDiscNameIm.Text = gvListDisc.Rows[e.RowIndex].Cells[1].Value.ToString();
+            nbInstockIm.Text = gvListDisc.Rows[e.RowIndex].Cells[2].Value.ToString();
+            btnImportDisc.Enabled = true;
+        }
+
+        private void btnImportDisc_Click(object sender, System.EventArgs e)
+        {
+            con.Open();
+            string register = "update disc set DISC_AMOUNT = DISC_AMOUNT + " + nbAmountIm.Value +
+                ", DISC_INSTOCK = DISC_INSTOCK + " + nbAmountIm.Value + "where disc_id = " + tbDiscIDIm.Text.Trim();
+            cmd = new SqlCommand(register, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            LoadDataDiscImport();
         }
     }
 }
