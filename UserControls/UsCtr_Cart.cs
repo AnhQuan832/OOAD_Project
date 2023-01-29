@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -14,22 +15,25 @@ namespace OOAD_Project
         BindingManagerBase current;
         SqlCommand cmd;
         int money = 0;
-
+        List<int> listID = new List<int>();
+        List<int> listAmount = new List<int>();
         public UsCtr_Cart()
         {
             InitializeComponent();
+
         }
 
         private void UsCtr_Cart_Load(object sender, EventArgs e)
         {
             DateTime dateTime = DateTime.Now;
             this.dtRent.Format = DateTimePickerFormat.Custom;
-            dtRent.Value = dateTime;
-            this.dtRent.CustomFormat = "dd MMM yyyy";
+            dtRent.CustomFormat = "dd/MM/yyyy";
+            dtRent.Value = dateTime.Date;
 
             this.dtDue.Format = DateTimePickerFormat.Custom;
-            this.dtDue.CustomFormat = "dd MMM yyyy";
-            dtDue.Value = dateTime;
+            dtDue.CustomFormat = "dd/MM/yyyy";
+            dtDue.Value = dateTime.Date;
+            dtDue.MinDate = dateTime.Date;
 
             InitializeCart();
             UpdateCart();
@@ -56,32 +60,100 @@ namespace OOAD_Project
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            string ID = "0001";
-            messsageBox.Caption = "Your order ID is: " + ID;
+            int status = 0;
+            int rentID = 0;
+            messsageBox.Caption = "Order successfully";
             messsageBox.Show();
+
+            dtDue.CustomFormat = "yyyy-MM-dd";
+            dtRent.CustomFormat = "yyyy-MM-dd";
+
+            con.Open();
+            string loadDT = "select STATUS_ID from STATUS where STATUS_NAME = 'Ordering'";
+            SqlCommand cmd = new SqlCommand(loadDT, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    status = (int)reader["STATUS_ID"];
+                }
+                reader.Close();
+            }
+            con.Close();
+
+            con.Open();
+            string insert = "insert into RENT (CUSTOMER_ID, RENT_DATE, DUE_DATE, RENT_DEPOSIT, TOTAL_PRICE, STATUS) values(" +
+                fLogin.ID + ",'" + dtRent.Text + "','" + dtDue.Text
+                + "'," + lbDeposite.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + lbRentPrice.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + status + ")";
+            cmd = new SqlCommand(insert, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
+            con.Open();
+            loadDT = "select DISC_ID, AMOUNT from CART_DETAIL where USER_ID = " + fLogin.ID;
+            cmd = new SqlCommand(loadDT, con);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    listID.Add((int)reader["DISC_ID"]);
+                    listAmount.Add((int)reader["AMOUNT"]);
+                }
+                reader.Close();
+            }
+            con.Close();
+
+            con.Open();
+            loadDT = "select TOP 1(RENT_ID) from RENT order by RENT_ID desc";
+            cmd = new SqlCommand(loadDT, con);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    rentID = (int)reader["RENT_ID"];
+                }
+                reader.Close();
+            }
+            con.Close();
+
+            for (int i = 0; i < listID.Count; i++)
+            {
+                con.Open();
+                insert = "insert into RENT_DETAIL (RENT_ID, DISC_ID, RENT_AMOUNT) values (" + rentID + "," + listID[i] + "," + listAmount[i] + ")";
+                cmd = new SqlCommand(insert, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            con.Open();
+            string delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
+            cmd = new SqlCommand(delete, con);
+            cmd.ExecuteNonQuery();
+            delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            UpdateCart();
         }
 
-        private void UpdateCart()
+        public void UpdateCart()
         {
             adapter = new SqlDataAdapter("SELECT DISC_NAME, DISC_PRICE, CD.AMOUNT, DISC_PRICE*CD.AMOUNT as TOTAL "
             + "FROM CART_DETAIL CD, DISC WHERE CD.DISC_ID = DISC.DISC_ID AND CD.USER_ID = " + fLogin.ID, con);
 
-            // Bộ phát sinh lệnh
             SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
 
-            // Khởi tạo bảng 
             dataTable = new DataTable();
 
-            // Gán dữ liệu cho dataTable
             adapter.FillSchema(dataTable, SchemaType.Mapped);
 
-            // Lấy dữ liệu đổ vào dataTable 
             adapter.Fill(dataTable);
 
-            // Gán dữ liệu nguồn cho DataGridView
             gvCart.DataSource = dataTable;
 
-            // Gán nguồn
             current = BindingContext[dataTable];
 
             string SQL = "select CART_PRICE from CART where USER_ID = " + fLogin.ID;
@@ -94,14 +166,9 @@ namespace OOAD_Project
             }
             catch (Exception ex) { }
 
+            this.dtDue.Format = DateTimePickerFormat.Custom;
+            this.dtRent.Format = DateTimePickerFormat.Custom;
         }
-
-        private void btnUpdateCart_Click(object sender, EventArgs e)
-        {
-            UpdateCart();
-
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataTable.Rows.Count == 0)
@@ -140,7 +207,9 @@ namespace OOAD_Project
             DateTime start = Convert.ToDateTime(dtRent.Value);
             DateTime end = Convert.ToDateTime(dtDue.Value);
             TimeSpan timeSpan = end - start;
-            int days = timeSpan.Days + 1;
+            int days = timeSpan.Days;
+            if (days == 0)
+                days = 1;
             money = 0;
             for (int i = 0; i < gvCart.Rows.Count; i++)
                 money += (int)dataTable.Rows[i][3] * days;

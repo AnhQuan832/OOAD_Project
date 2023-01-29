@@ -41,7 +41,7 @@ namespace OOAD_Project
             con.Close();
         }
 
-        private void LoadAllProduct(string discName)
+        public void LoadAllProduct(string discName)
         {
             int sum;
             string query;
@@ -50,14 +50,14 @@ namespace OOAD_Project
                 sum = int.Parse(SQLConnection.GetFieldValues("select COUNT(*) from DISC"));
                 query = "select DISC_ID, DISC_NAME, GENRE_NAME, DISC_PRICE " +
                 "from DISC, GENRE " +
-                "where DISC.DISC_GENRE = GENRE.GENRE_ID and DISC_AMOUNT > 0";
+                "where DISC.DISC_GENRE = GENRE.GENRE_ID and DISC_INSTOCK > 0";
             }
             else
             {
                 sum = int.Parse(SQLConnection.GetFieldValues("select COUNT(*) from DISC WHERE DISC_NAME = N'" + tbxSearch.Text.Trim() + "'"));
                 query = "select DISC_ID, DISC_NAME, GENRE_NAME, DISC_PRICE " +
                 "from DISC, GENRE " +
-                "where DISC.DISC_GENRE = GENRE.GENRE_ID and DISC_AMOUNT > 0 and DISC_NAME = N'" + discName + "'";
+                "where DISC.DISC_GENRE = GENRE.GENRE_ID and DISC_INSTOCK > 0 and DISC_NAME = N'" + discName + "'";
             }
             if (sum == 0) return;
             ShopItem[] shopItem = new ShopItem[sum];

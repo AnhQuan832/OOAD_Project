@@ -7,6 +7,7 @@ namespace OOAD_Project
     public partial class fLogin : Form
     {
         public static int ID;
+        public static string permission;
         public static String acc;
 
         SqlDataAdapter da = new SqlDataAdapter();
@@ -28,7 +29,8 @@ namespace OOAD_Project
         {
             if (tbUsername.Text == "" || tbPassword.Text == "")
             {
-                MessageBox.Show("Please fill out the information!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                message.Caption = "Please fill out the information";
+                message.Show();
             }
             else
             {
@@ -41,7 +43,7 @@ namespace OOAD_Project
                 {
                     acc = tbUsername.Text;
                     ID = int.Parse(SQLConnection.GetFieldValues("SELECT USER_ID FROM USERS WHERE USER_NAME = '" + acc + "'"));
-
+                    permission = (string)(SQLConnection.GetFieldValues("SELECT POSITION_NAME FROM USERS, POSITION WHERE USERS.USER_POSITION = POSITION.POSITION_ID AND USER_NAME = '" + acc + "'"));
                     this.Hide();
                     fMainPage mainPage = new fMainPage(this);
                     mainPage.ShowDialog();
@@ -51,8 +53,8 @@ namespace OOAD_Project
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect information", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tbUsername.Focus();
+                    message.Caption = "Incorrect information";
+                    message.Show();
                 }
             }
             con.Close();
@@ -78,6 +80,11 @@ namespace OOAD_Project
         private void btnBackToLogin_Click(object sender, EventArgs e)
         {
             pnSignIn.BringToFront();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
