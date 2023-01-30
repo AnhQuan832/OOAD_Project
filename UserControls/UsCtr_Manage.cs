@@ -205,8 +205,8 @@ namespace OOAD_Project
 
                 if (dr.HasRows)
                 {
-                    messageBox.Caption = tbDiscName.Text.Trim() + " is existing in store!";
-                    messageBox.Show();
+                    messageDisc.Caption = tbDiscName.Text.Trim() + " is existing in store!";
+                    messageDisc.Show();
                 }
                 else
                 {
@@ -296,8 +296,40 @@ namespace OOAD_Project
             cmd = new SqlCommand(register, con);
             cmd.ExecuteNonQuery();
             con.Close();
-
             LoadDataDiscImport();
+        }
+
+        private void gvDisc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            tbDiscID.Text = gvDisc.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbDiscName.Text = gvDisc.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cbProducer.SelectedIndex = cbProducer.FindStringExact(gvDisc.Rows[e.RowIndex].Cells[2].Value.ToString());
+            cbGenre.SelectedIndex = cbGenre.FindStringExact(gvDisc.Rows[e.RowIndex].Cells[3].Value.ToString());
+            tbRentPrice.Text = gvDisc.Rows[e.RowIndex].Cells[5].Value.ToString();
+            nbAmount.Text = gvDisc.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void btnUpdateDisc_Click(object sender, System.EventArgs e)
+        {
+            if (!CheckInputDisc())
+            {
+
+            }
+            else
+            {
+                int genreID = GetGenreID();
+                int producerID = GetGenreID();
+
+                con.Open();
+                string register = "update DISC set DISC_NAME = '" + tbDiscName.Text.Trim() + "', DISC_AMOUNT = " + nbAmount.Value +
+                    ", DISC_PRODUCER = " + producerID + ", DISC_PRICE = " + tbRentPrice.Text + ", DISC_GENRE = " + genreID + " where DISC_ID = " + tbDiscID.Text;
+                cmd = new SqlCommand(register, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                LoadDataDisc();
+            }
         }
     }
 }
