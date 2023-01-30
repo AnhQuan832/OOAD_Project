@@ -164,3 +164,9 @@ D:\OOAD_Project\obj\Debug\OOAD_Project.csproj.CopyComplete
 D:\OOAD_Project\obj\Debug\OOAD_Project.exe
 D:\OOAD_Project\obj\Debug\OOAD_Project.pdb
 D:\BaiTap\Nam3\HK1\OOAD\project\obj\Debug\OOAD_Project.UsCtr_Manage.resources
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\FireSharp.dll
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\FireSharp.Serialization.JsonNet.dll
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\Newtonsoft.Json.dll
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\RestSharp.dll
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\Newtonsoft.Json.xml
+D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\RestSharp.xml

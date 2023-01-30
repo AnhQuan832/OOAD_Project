@@ -112,5 +112,10 @@ namespace OOAD_Project
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnUserProfile_Click_1(object sender, EventArgs e)
+        {
+            UserProfilecs.BringToFront();
+        }
     }
 }
