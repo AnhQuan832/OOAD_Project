@@ -204,5 +204,15 @@ namespace OOAD_Project
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public void SubscribedDisc()
+        {
+            isSubscribe = !isSubscribe;
+            btnSubscribe.Text = "Unsubscribe";
+            btnSubscribe.BorderColor = Color.FromArgb(57, 110, 176);
+            btnSubscribe.BorderThickness = 2;
+            btnSubscribe.FillColor = Color.White;
+            btnSubscribe.ForeColor = Color.FromArgb(57, 110, 176);
+        }
     }
 }

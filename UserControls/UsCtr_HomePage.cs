@@ -47,11 +47,14 @@ namespace OOAD_Project
             }
             int n = 4;
             int count = 0;
+            int subDisc = 0;
             UsCtr_Card[] DiscCard = new UsCtr_Card[n];
             string[] listDisc = new string[4];
             int[] discID = new int[4];
+            int[] listID = new int[] { 0, 0, 0, 0 };
             con.Open();
-            string loadDT = "select distinct(DISC_NAME), COMINGDISC.DISC_ID from COMINGDISC, DISC where COMINGDISC.DISC_ID = DISC.DISC_ID";
+            string loadDT = "select distinct(DISC_NAME), COMINGDISC.DISC_ID from COMINGDISC, DISC "
+                + "where COMINGDISC.DISC_ID = DISC.DISC_ID";
             SqlCommand cmd = new SqlCommand(loadDT, con);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
@@ -66,6 +69,28 @@ namespace OOAD_Project
             }
             con.Close();
 
+            con.Open();
+            loadDT = "select COMINGDISC.DISC_ID, USER_ID from COMINGDISC,  SUBSCRIBE  "
+                + "where SUBSCRIBE.DISC_ID = COMINGDISC.DISC_ID and USER_ID = " + fLogin.ID;
+            cmd = new SqlCommand(loadDT, con);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        if (discID[i] == (int)reader["DISC_ID"])
+                        {
+                            listID[i] = 1;
+                            break;
+                        }
+                    }
+                }
+                reader.Close();
+            }
+            con.Close();
+
             if (count < 4)
                 for (int i = count; i < 4; i++)
                     listDisc[i] = "Coming soon";
@@ -73,6 +98,8 @@ namespace OOAD_Project
             for (int i = 0; i < 4; i++)
             {
                 DiscCard[i] = new UsCtr_Card(permision, discID[i]);
+                if (listID[i] == 1)
+                    DiscCard[i].SubscribedDisc();
                 pnCardView.Controls.Add(DiscCard[i]);
 
                 //DiscCard[i].ItemImage = Properties.Resources.film_poster;

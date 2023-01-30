@@ -41,10 +41,9 @@
             this.pnCardView.BorderRadius = 20;
             this.pnCardView.BorderThickness = 2;
             this.pnCardView.Controls.Add(this.guna2HtmlLabel1);
-            this.pnCardView.Location = new System.Drawing.Point(33, 38);
-            this.pnCardView.Margin = new System.Windows.Forms.Padding(4);
+            this.pnCardView.Location = new System.Drawing.Point(25, 31);
             this.pnCardView.Name = "pnCardView";
-            this.pnCardView.Size = new System.Drawing.Size(1632, 659);
+            this.pnCardView.Size = new System.Drawing.Size(1224, 535);
             this.pnCardView.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -53,9 +52,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(613, 20);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(460, 16);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(365, 83);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(339, 67);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Coming soon";
             // 
@@ -65,21 +65,21 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(63, 799);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(47, 649);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(1564, 83);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(1173, 67);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Subscribe to get an email as soon as it comes out!";
             // 
             // UsCtr_HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.pnCardView);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsCtr_HomePage";
-            this.Size = new System.Drawing.Size(1692, 971);
+            this.Size = new System.Drawing.Size(1269, 789);
             this.Load += new System.EventHandler(this.UsCtr_HomePage_Load);
             this.pnCardView.ResumeLayout(false);
             this.ResumeLayout(false);
