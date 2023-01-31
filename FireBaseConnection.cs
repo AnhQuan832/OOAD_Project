@@ -26,7 +26,8 @@ namespace OOAD_Project
             //Push  - Picturebox  => ms => byte Array => toBase64String
 
             MemoryStream ms = new MemoryStream();
-            imgBox.Image.Save(ms, ImageFormat.Jpeg);
+            Bitmap bitmap = new Bitmap(imgBox.Image);
+            bitmap.Save(ms, ImageFormat.Jpeg);
 
             byte[] a = ms.GetBuffer();
 

@@ -56,8 +56,7 @@ namespace OOAD_Project
                 Image img = new Bitmap(ofd.FileName);
                 avatarImgBox.Image = img.GetThumbnailImage(360, 200, null, new IntPtr());
 
-                fireBaseConnection.PushImage(avatarImgBox, "Avatar/" + fLogin.ID);
-                fireBaseConnection.RetrieveImage(avatarImgBox, "Avatar/" + fLogin.ID);
+
             }
         }
 
@@ -79,6 +78,7 @@ namespace OOAD_Project
 
                 message.Caption = "Update successfully";
                 message.Show();
+                fireBaseConnection.PushImage(avatarImgBox, "Avatar/" + fLogin.ID);
                 LoadData();
             }
         }

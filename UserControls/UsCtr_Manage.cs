@@ -254,7 +254,22 @@ namespace OOAD_Project
                     cmd = new SqlCommand(register, con);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    fireBaseConnection.PushImage(pcDisc, "Disc/" + tbDiscID);
+
+                    int discID = 0;
+                    con.Open();
+                    string loadDT = "select DISC_ID from DISC where DISC_NAME = '" + tbDiscName.Text.Trim() + "'";
+                    cmd = new SqlCommand(loadDT, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            discID = (int)reader["DISC_ID"];
+                        }
+                        reader.Close();
+                    }
+                    con.Close();
+                    fireBaseConnection.PushImage(pcDisc, "Disc/" + discID);
                     //fireBaseConnection.RetrieveImage(pcDisc, "Disc/" + tbDiscID);
                     LoadDataDisc();
                 }
@@ -364,16 +379,30 @@ namespace OOAD_Project
             {
                 int genreID = GetGenreID();
                 int producerID = GetProducerID();
-
                 con.Open();
-                string register = "update DISC set DISC_NAME = '" + tbDiscName.Text.Trim() + "', DISC_AMOUNT = " + nbAmount.Value +
-                    ", DISC_PRODUCER = " + producerID + ", DISC_PRICE = " + tbRentPrice.Text + ", DISC_GENRE = " + genreID + " where DISC_ID = " + tbDiscID.Text;
-                cmd = new SqlCommand(register, con);
-                cmd.ExecuteNonQuery();
+                string check = "SELECT DISC_NAME FROM DISC WHERE DISC_NAME = '" + tbDiscName.Text.Trim() + "'";
+                cmd = new SqlCommand(check, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (!dr.HasRows)
+                {
+                    messageDisc.Caption = tbDiscName.Text.Trim() + " is not existing in store!";
+                    messageDisc.Show();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+                    string register = "update DISC set DISC_NAME = '" + tbDiscName.Text.Trim() + "', DISC_AMOUNT = " + nbAmount.Value +
+                        ", DISC_PRODUCER = " + producerID + ", DISC_PRICE = " + tbRentPrice.Text + ", DISC_GENRE = " + genreID + " where DISC_ID = " + tbDiscID.Text;
+                    cmd = new SqlCommand(register, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    fireBaseConnection.PushImage(pcDisc, "Disc/" + tbDiscID.Text);
+                    fireBaseConnection.RetrieveImage(pcDisc, "Disc/" + tbDiscID.Text);
+                    LoadDataDisc();
+                }
                 con.Close();
-                fireBaseConnection.PushImage(pcDisc, "Disc/" + tbDiscID.Text);
-                fireBaseConnection.RetrieveImage(pcDisc, "Disc/" + tbDiscID.Text);
-                LoadDataDisc();
             }
         }
 
