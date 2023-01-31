@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing.Imaging;
-
-using FireSharp.Config;
+﻿using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using OOAD_Project.Properties;
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 using WinFormsApp1;
-using System.Drawing;
-using System.Reflection;
-using OOAD_Project.Properties;
 
 namespace OOAD_Project
 {
@@ -49,7 +42,6 @@ namespace OOAD_Project
 
             imgBox.Image = null;
 
-            MessageBox.Show("Image pushed");
         }
 
         public async void RetrieveImage(PictureBox imgBox, String ImagePath)
@@ -75,9 +67,9 @@ namespace OOAD_Project
             {
                 imgBox.Image = Resources.Cream_logo;
             }
-            
 
-            
+
+
         }
     }
 }

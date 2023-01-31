@@ -133,8 +133,8 @@ namespace OOAD_Project
             string delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
             cmd = new SqlCommand(delete, con);
             cmd.ExecuteNonQuery();
-            delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
-            cmd.ExecuteNonQuery();
+
+
             con.Close();
             UpdateCart();
         }

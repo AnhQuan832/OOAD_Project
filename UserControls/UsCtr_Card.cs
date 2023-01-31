@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOAD_Project.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -9,6 +10,7 @@ namespace OOAD_Project
 {
     public partial class UsCtr_Card : UserControl
     {
+        FireBaseConnection fireBaseConnection = new FireBaseConnection();
         bool isSubscribe = false;
         bool isClick = false;
         int discID;
@@ -38,6 +40,7 @@ namespace OOAD_Project
             }
             this.discID = discID;
             cbDiscName.Visible = false;
+            fireBaseConnection.RetrieveImage(pbDisc, "Disc/" + discID);
         }
 
         public void DisableButton()
@@ -119,7 +122,11 @@ namespace OOAD_Project
         private void btnReady_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please wait for a minute. We are sending email to your customers!");
+
             SendNotification();
+            lbName.Text = "Coming soon";
+            pbDisc.Image = Resources.Cream_logo;
+            btnSubscribe.Enabled = false;
             RemoveComingDisc();
             MessageBox.Show("Send email successfully!");
         }
@@ -179,6 +186,7 @@ namespace OOAD_Project
             cmd.CommandText = "insert into COMINGDISC values(" + discID + ")";
             cmd.ExecuteNonQuery();
             con.Close();
+            fireBaseConnection.RetrieveImage(pbDisc, "Disc/" + discID);
         }
         private void RemoveComingDisc()
         {

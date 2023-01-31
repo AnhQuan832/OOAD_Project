@@ -16,6 +16,7 @@ namespace OOAD_Project
         public UsCtr_OrderDetail()
         {
             InitializeComponent();
+
         }
 
         public void LoadData(int ID)
@@ -97,7 +98,8 @@ namespace OOAD_Project
             cmd.ExecuteNonQuery();
             con.Close();
 
-
+            message.Caption = "Success";
+            message.Show();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace OOAD_Project
 {
     public partial class ShopItem : UserControl
     {
+        FireBaseConnection fireBaseConnection = new FireBaseConnection();
         SqlCommand cmd = new SqlCommand();
         SqlConnection con = new SqlConnection(SQLConnection.connectionString);
 
@@ -23,10 +24,12 @@ namespace OOAD_Project
            int nHeightEllipse // width of ellipse
        );
         int itemID;
-        public ShopItem()
+        public ShopItem(int ID)
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            fireBaseConnection.RetrieveImage(pbDisc, "Disc/" + ID);
+
         }
 
         public Image ItemImage

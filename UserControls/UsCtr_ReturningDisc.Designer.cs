@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReturn = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbDiscName = new Guna.UI2.WinForms.Guna2TextBox();
             this.gvReturningDisc = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rent_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lnFinalPrice = new System.Windows.Forms.Label();
@@ -50,12 +55,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lbDeposit = new System.Windows.Forms.Label();
             this.nbDamageDisc = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rent_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.messsageBox = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.lbNotifi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gvReturningDisc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbDamageDisc)).BeginInit();
             this.SuspendLayout();
@@ -71,10 +72,10 @@
             this.btnReturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnReturn.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(1015, 469);
+            this.btnReturn.Location = new System.Drawing.Point(888, 469);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(200, 55);
+            this.btnReturn.Size = new System.Drawing.Size(270, 55);
             this.btnReturn.TabIndex = 34;
             this.btnReturn.Text = "Return Disc";
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -134,21 +135,21 @@
             this.gvReturningDisc.AllowUserToDeleteRows = false;
             this.gvReturningDisc.AllowUserToResizeColumns = false;
             this.gvReturningDisc.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.gvReturningDisc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvReturningDisc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.gvReturningDisc.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvReturningDisc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvReturningDisc.ColumnHeadersHeight = 50;
             this.gvReturningDisc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gvReturningDisc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -157,33 +158,33 @@
             this.Amount,
             this.Price_day,
             this.Rent_Price});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvReturningDisc.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvReturningDisc.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvReturningDisc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.gvReturningDisc.Location = new System.Drawing.Point(21, 10);
             this.gvReturningDisc.MultiSelect = false;
             this.gvReturningDisc.Name = "gvReturningDisc";
             this.gvReturningDisc.ReadOnly = true;
             this.gvReturningDisc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvReturningDisc.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvReturningDisc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvReturningDisc.RowHeadersVisible = false;
             this.gvReturningDisc.RowHeadersWidth = 51;
             this.gvReturningDisc.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.gvReturningDisc.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.gvReturningDisc.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvReturningDisc.RowTemplate.DividerHeight = 1;
             this.gvReturningDisc.RowTemplate.Height = 70;
             this.gvReturningDisc.Size = new System.Drawing.Size(801, 514);
@@ -211,6 +212,55 @@
             this.gvReturningDisc.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gvReturningDisc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReturningDisc_CellContentClick);
             this.gvReturningDisc.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvReturningDisc_CellMouseClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "DISC_ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Disc_Name
+            // 
+            this.Disc_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Disc_Name.DataPropertyName = "DISC_NAME";
+            this.Disc_Name.FillWeight = 191.0627F;
+            this.Disc_Name.HeaderText = "Disc Name";
+            this.Disc_Name.MinimumWidth = 6;
+            this.Disc_Name.Name = "Disc_Name";
+            this.Disc_Name.ReadOnly = true;
+            this.Disc_Name.Width = 300;
+            // 
+            // Amount
+            // 
+            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Amount.DataPropertyName = "RENT_AMOUNT";
+            this.Amount.FillWeight = 8.529577F;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            // 
+            // Price_day
+            // 
+            this.Price_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price_day.DataPropertyName = "DISC_PRICE";
+            this.Price_day.FillWeight = 8.529577F;
+            this.Price_day.HeaderText = "Price per Day";
+            this.Price_day.MinimumWidth = 6;
+            this.Price_day.Name = "Price_day";
+            this.Price_day.ReadOnly = true;
+            this.Price_day.Width = 150;
+            // 
+            // Rent_Price
+            // 
+            this.Rent_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Rent_Price.DataPropertyName = "TOTAL";
+            this.Rent_Price.HeaderText = "Rent Price";
+            this.Rent_Price.Name = "Rent_Price";
+            this.Rent_Price.ReadOnly = true;
+            this.Rent_Price.Width = 150;
             // 
             // btnUpdate
             // 
@@ -368,69 +418,31 @@
             this.nbDamageDisc.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.nbDamageDisc.UpDownButtonForeColor = System.Drawing.Color.Black;
             // 
-            // ID
+            // message
             // 
-            this.ID.DataPropertyName = "DISC_ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
+            this.message.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.message.Caption = "Success";
+            this.message.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.message.Parent = null;
+            this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.message.Text = null;
             // 
-            // Disc_Name
+            // lbNotifi
             // 
-            this.Disc_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Disc_Name.DataPropertyName = "DISC_NAME";
-            this.Disc_Name.FillWeight = 191.0627F;
-            this.Disc_Name.HeaderText = "Disc Name";
-            this.Disc_Name.MinimumWidth = 6;
-            this.Disc_Name.Name = "Disc_Name";
-            this.Disc_Name.ReadOnly = true;
-            this.Disc_Name.Width = 300;
-            // 
-            // Amount
-            // 
-            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Amount.DataPropertyName = "RENT_AMOUNT";
-            this.Amount.FillWeight = 8.529577F;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.MinimumWidth = 6;
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            // 
-            // Price_day
-            // 
-            this.Price_day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price_day.DataPropertyName = "DISC_PRICE";
-            this.Price_day.FillWeight = 8.529577F;
-            this.Price_day.HeaderText = "Price per Day";
-            this.Price_day.MinimumWidth = 6;
-            this.Price_day.Name = "Price_day";
-            this.Price_day.ReadOnly = true;
-            this.Price_day.Width = 150;
-            // 
-            // Rent_Price
-            // 
-            this.Rent_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Rent_Price.DataPropertyName = "TOTAL";
-            this.Rent_Price.HeaderText = "Rent Price";
-            this.Rent_Price.Name = "Rent_Price";
-            this.Rent_Price.ReadOnly = true;
-            this.Rent_Price.Width = 150;
-            // 
-            // messsageBox
-            // 
-            this.messsageBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.messsageBox.Caption = "Return successfully";
-            this.messsageBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
-            this.messsageBox.Parent = null;
-            this.messsageBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.messsageBox.Text = null;
+            this.lbNotifi.BackColor = System.Drawing.Color.Transparent;
+            this.lbNotifi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNotifi.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lbNotifi.Location = new System.Drawing.Point(976, 445);
+            this.lbNotifi.Name = "lbNotifi";
+            this.lbNotifi.Size = new System.Drawing.Size(3, 2);
+            this.lbNotifi.TabIndex = 36;
             // 
             // UsCtr_ReturningDisc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbNotifi);
             this.Controls.Add(this.nbDamageDisc);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnReturn);
@@ -482,6 +494,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rent_Price;
-        private Guna.UI2.WinForms.Guna2MessageDialog messsageBox;
+        private Guna.UI2.WinForms.Guna2MessageDialog message;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbNotifi;
     }
 }

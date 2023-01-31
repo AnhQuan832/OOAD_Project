@@ -52,6 +52,8 @@
             this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.lbNotifi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gvOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -232,10 +234,10 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(1009, 462);
+            this.btnConfirm.Location = new System.Drawing.Point(859, 458);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(200, 49);
+            this.btnConfirm.Size = new System.Drawing.Size(269, 49);
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "Confirm Order";
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -415,11 +417,31 @@
             this.Price_day.ReadOnly = true;
             this.Price_day.Width = 150;
             // 
+            // message
+            // 
+            this.message.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.message.Caption = null;
+            this.message.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.message.Parent = null;
+            this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.message.Text = null;
+            // 
+            // lbNotifi
+            // 
+            this.lbNotifi.BackColor = System.Drawing.Color.Transparent;
+            this.lbNotifi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNotifi.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lbNotifi.Location = new System.Drawing.Point(938, 431);
+            this.lbNotifi.Name = "lbNotifi";
+            this.lbNotifi.Size = new System.Drawing.Size(3, 2);
+            this.lbNotifi.TabIndex = 23;
+            // 
             // UsCtr_OrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lbNotifi);
             this.Controls.Add(this.gvOrder);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label5);
@@ -467,5 +489,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Disc_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_day;
+        private Guna.UI2.WinForms.Guna2MessageDialog message;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbNotifi;
     }
 }

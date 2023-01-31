@@ -17,6 +17,7 @@ namespace OOAD_Project
         public UsCtr_ReturningDisc()
         {
             InitializeComponent();
+            lbNotifi.Text = "";
         }
 
         private void UsCtr_ReturningDisc_Load(object sender, System.EventArgs e)
@@ -181,13 +182,18 @@ namespace OOAD_Project
             cmd.ExecuteNonQuery();
             con.Close();
 
+            int money = ConvertToMoney(lnFinalPrice.Text);
+            if (money < 0) money = -money;
             con.Open();
             update = "insert into RETURN_DISC (RENT_ID, RETURN_DATE, DAMAGED_FINE, OVERDATE_FINE, RETURN_PRICE) values (" +
                 +rentID + ",'" + dateTime.ToString("yyyy-MM-dd") + "'," + ConvertToMoney(lbDmgFine.Text) + ","
-                + ConvertToMoney(lbOverDateFine.Text) + "," + ConvertToMoney(lnFinalPrice.Text) + ")";
+                + ConvertToMoney(lbOverDateFine.Text) + "," + money + ")";
             cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();
             con.Close();
+
+            message.Show();
+
         }
     }
 }

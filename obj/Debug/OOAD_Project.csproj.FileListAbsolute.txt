@@ -170,3 +170,9 @@ D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\Newtonsoft.Json.dll
 D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\RestSharp.dll
 D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\Newtonsoft.Json.xml
 D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\RestSharp.xml
+D:\OOAD\OOAD\bin\Debug\FireSharp.dll
+D:\OOAD\OOAD\bin\Debug\FireSharp.Serialization.JsonNet.dll
+D:\OOAD\OOAD\bin\Debug\Newtonsoft.Json.dll
+D:\OOAD\OOAD\bin\Debug\RestSharp.dll
+D:\OOAD\OOAD\bin\Debug\Newtonsoft.Json.xml
+D:\OOAD\OOAD\bin\Debug\RestSharp.xml

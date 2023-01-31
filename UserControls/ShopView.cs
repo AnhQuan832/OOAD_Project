@@ -73,15 +73,13 @@ namespace OOAD_Project
                 count = 0;
                 while (reader.Read())
                 {
-                    shopItem[count] = new ShopItem();
+                    shopItem[count] = new ShopItem((int)reader["DISC_ID"]);
                     pnView.Controls.Add(shopItem[count]);
 
-                    //Thay đổi tên SP, giá và hình ảnh trên UI theo từng hàng dữ liệu lấy được 
-                    //shopItem[count].ItemImage = Image.FromFile("../../Resources/" + reader["HinhMinhHoa"].ToString());
                     shopItem[count].ItemID = (int)reader["DISC_ID"];
                     shopItem[count].ItemName = reader["DISC_NAME"].ToString();
                     shopItem[count].ItemGenre = reader["GENRE_NAME"].ToString();
-                    shopItem[count].ItemPrice = string.Format("{0:#,###}đ", reader["DISC_PRICE"]) + "/h";
+                    shopItem[count].ItemPrice = string.Format("{0:#,###}đ", reader["DISC_PRICE"]) + "/day";
 
 
                     //Thiết lập vị trí của các item

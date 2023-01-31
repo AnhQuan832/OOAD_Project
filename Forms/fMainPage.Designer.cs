@@ -88,7 +88,7 @@
             this.btnManage.IconSize = 40;
             this.btnManage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManage.Location = new System.Drawing.Point(0, 437);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnManage.Name = "btnManage";
             this.btnManage.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.btnManage.Size = new System.Drawing.Size(187, 74);
@@ -114,7 +114,7 @@
             this.btnOrder.IconSize = 40;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrder.Location = new System.Drawing.Point(0, 363);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.btnOrder.Size = new System.Drawing.Size(187, 74);
@@ -140,7 +140,7 @@
             this.btnCart.IconSize = 40;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCart.Location = new System.Drawing.Point(0, 289);
-            this.btnCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCart.Margin = new System.Windows.Forms.Padding(4);
             this.btnCart.Name = "btnCart";
             this.btnCart.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.btnCart.Size = new System.Drawing.Size(187, 74);
@@ -166,7 +166,7 @@
             this.btnStore.IconSize = 40;
             this.btnStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStore.Location = new System.Drawing.Point(0, 215);
-            this.btnStore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStore.Margin = new System.Windows.Forms.Padding(4);
             this.btnStore.Name = "btnStore";
             this.btnStore.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.btnStore.Size = new System.Drawing.Size(187, 74);
@@ -193,7 +193,7 @@
             this.btnHome.IconSize = 40;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 141);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.btnHome.Size = new System.Drawing.Size(187, 74);
@@ -210,10 +210,10 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::OOAD_Project.Properties.Resources.Cream_logo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -232,7 +232,7 @@
             this.ibtDX.IconSize = 40;
             this.ibtDX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtDX.Location = new System.Drawing.Point(0, 810);
-            this.ibtDX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ibtDX.Margin = new System.Windows.Forms.Padding(4);
             this.ibtDX.Name = "ibtDX";
             this.ibtDX.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.ibtDX.Size = new System.Drawing.Size(187, 74);
@@ -251,16 +251,17 @@
             this.guna2Panel2.Controls.Add(this.btnClose);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(187, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1268, 115);
             this.guna2Panel2.TabIndex = 6;
             // 
             // btnUserProfile
             // 
+            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.Image")));
             this.btnUserProfile.Location = new System.Drawing.Point(1127, 32);
-            this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserProfile.Name = "btnUserProfile";
             this.btnUserProfile.Size = new System.Drawing.Size(73, 70);
             this.btnUserProfile.TabIndex = 7;
@@ -277,7 +278,7 @@
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
             this.btnMinimize.Location = new System.Drawing.Point(1205, 4);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(27, 25);
             this.btnMinimize.TabIndex = 6;
@@ -294,7 +295,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(1234, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(27, 25);
             this.btnClose.TabIndex = 5;
@@ -306,7 +307,7 @@
             this.pnView.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pnView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnView.Location = new System.Drawing.Point(187, 115);
-            this.pnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnView.Margin = new System.Windows.Forms.Padding(2);
             this.pnView.Name = "pnView";
             this.pnView.Size = new System.Drawing.Size(1268, 769);
             this.pnView.TabIndex = 7;

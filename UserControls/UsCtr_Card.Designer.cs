@@ -31,10 +31,10 @@
             this.pbDisc = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSubscribe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbDiscName = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnReady = new FontAwesome.Sharp.IconButton();
             this.btnJustify = new FontAwesome.Sharp.IconButton();
             this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnReady = new FontAwesome.Sharp.IconButton();
-            this.cbDiscName = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,10 +44,10 @@
             this.pbDisc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbDisc.BorderRadius = 5;
             this.pbDisc.ImageRotate = 0F;
-            this.pbDisc.Location = new System.Drawing.Point(64, 41);
-            this.pbDisc.Margin = new System.Windows.Forms.Padding(4);
+            this.pbDisc.Location = new System.Drawing.Point(48, 33);
             this.pbDisc.Name = "pbDisc";
-            this.pbDisc.Size = new System.Drawing.Size(227, 263);
+            this.pbDisc.Size = new System.Drawing.Size(170, 214);
+            this.pbDisc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDisc.TabIndex = 1;
             this.pbDisc.TabStop = false;
             // 
@@ -62,10 +62,9 @@
             this.btnSubscribe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnSubscribe.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSubscribe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.btnSubscribe.Location = new System.Drawing.Point(64, 391);
-            this.btnSubscribe.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubscribe.Location = new System.Drawing.Point(48, 318);
             this.btnSubscribe.Name = "btnSubscribe";
-            this.btnSubscribe.Size = new System.Drawing.Size(240, 55);
+            this.btnSubscribe.Size = new System.Drawing.Size(180, 45);
             this.btnSubscribe.TabIndex = 3;
             this.btnSubscribe.Text = "Subscribe";
             this.btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
@@ -80,60 +79,10 @@
             this.guna2Panel1.Controls.Add(this.btnJustify);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(361, 469);
+            this.guna2Panel1.Size = new System.Drawing.Size(271, 381);
             this.guna2Panel1.TabIndex = 4;
-            // 
-            // btnJustify
-            // 
-            this.btnJustify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnJustify.BackColor = System.Drawing.Color.Transparent;
-            this.btnJustify.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnJustify.FlatAppearance.BorderSize = 0;
-            this.btnJustify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnJustify.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnJustify.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnJustify.IconSize = 28;
-            this.btnJustify.Location = new System.Drawing.Point(285, 11);
-            this.btnJustify.Name = "btnJustify";
-            this.btnJustify.Size = new System.Drawing.Size(28, 28);
-            this.btnJustify.TabIndex = 1;
-            this.btnJustify.UseVisualStyleBackColor = false;
-            this.btnJustify.Click += new System.EventHandler(this.btnJustify_Click);
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = false;
-            this.lbName.AutoSizeHeightOnly = true;
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.lbName.Location = new System.Drawing.Point(14, 322);
-            this.lbName.Margin = new System.Windows.Forms.Padding(4);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(336, 34);
-            this.lbName.TabIndex = 2;
-            this.lbName.Text = "Name";
-            this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnReady
-            // 
-            this.btnReady.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnReady.BackColor = System.Drawing.Color.Transparent;
-            this.btnReady.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReady.FlatAppearance.BorderSize = 0;
-            this.btnReady.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReady.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
-            this.btnReady.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnReady.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReady.IconSize = 28;
-            this.btnReady.Location = new System.Drawing.Point(319, 11);
-            this.btnReady.Name = "btnReady";
-            this.btnReady.Size = new System.Drawing.Size(28, 28);
-            this.btnReady.TabIndex = 1;
-            this.btnReady.UseVisualStyleBackColor = false;
-            this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
             // 
             // cbDiscName
             // 
@@ -149,23 +98,75 @@
             this.cbDiscName.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.cbDiscName.ItemsAppearance.SelectedFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDiscName.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.cbDiscName.Location = new System.Drawing.Point(14, 322);
+            this.cbDiscName.Location = new System.Drawing.Point(10, 262);
+            this.cbDiscName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbDiscName.Name = "cbDiscName";
-            this.cbDiscName.Size = new System.Drawing.Size(333, 36);
+            this.cbDiscName.Size = new System.Drawing.Size(251, 36);
             this.cbDiscName.TabIndex = 5;
+            // 
+            // btnReady
+            // 
+            this.btnReady.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnReady.BackColor = System.Drawing.Color.Transparent;
+            this.btnReady.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReady.FlatAppearance.BorderSize = 0;
+            this.btnReady.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReady.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnReady.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnReady.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReady.IconSize = 28;
+            this.btnReady.Location = new System.Drawing.Point(239, 9);
+            this.btnReady.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReady.Name = "btnReady";
+            this.btnReady.Size = new System.Drawing.Size(21, 23);
+            this.btnReady.TabIndex = 1;
+            this.btnReady.UseVisualStyleBackColor = false;
+            this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
+            // 
+            // btnJustify
+            // 
+            this.btnJustify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnJustify.BackColor = System.Drawing.Color.Transparent;
+            this.btnJustify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnJustify.FlatAppearance.BorderSize = 0;
+            this.btnJustify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnJustify.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnJustify.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJustify.IconSize = 28;
+            this.btnJustify.Location = new System.Drawing.Point(214, 9);
+            this.btnJustify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJustify.Name = "btnJustify";
+            this.btnJustify.Size = new System.Drawing.Size(21, 23);
+            this.btnJustify.TabIndex = 1;
+            this.btnJustify.UseVisualStyleBackColor = false;
+            this.btnJustify.Click += new System.EventHandler(this.btnJustify_Click);
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = false;
+            this.lbName.AutoSizeHeightOnly = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.lbName.Location = new System.Drawing.Point(10, 262);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(252, 31);
+            this.lbName.TabIndex = 2;
+            this.lbName.Text = "Name";
+            this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UsCtr_Card
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnSubscribe);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.pbDisc);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsCtr_Card";
-            this.Size = new System.Drawing.Size(361, 469);
+            this.Size = new System.Drawing.Size(271, 381);
             ((System.ComponentModel.ISupportInitialize)(this.pbDisc)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
