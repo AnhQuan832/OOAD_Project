@@ -35,11 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvCart = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtDue = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtRent = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +46,12 @@
             this.btnPlaceOrder = new Guna.UI2.WinForms.Guna2Button();
             this.messsageBox = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             this.gvCart.ColumnHeadersHeight = 50;
             this.gvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Image,
+            this.ID,
             this.Disc_Name,
             this.Amount,
             this.Price_day,
@@ -91,7 +93,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvCart.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.gvCart.Location = new System.Drawing.Point(18, 28);
+            this.gvCart.Location = new System.Drawing.Point(24, 34);
+            this.gvCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gvCart.MultiSelect = false;
             this.gvCart.Name = "gvCart";
             this.gvCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -110,7 +113,7 @@
             this.gvCart.RowTemplate.DividerHeight = 1;
             this.gvCart.RowTemplate.Height = 210;
             this.gvCart.RowTemplate.ReadOnly = true;
-            this.gvCart.Size = new System.Drawing.Size(862, 788);
+            this.gvCart.Size = new System.Drawing.Size(1149, 970);
             this.gvCart.TabIndex = 1;
             this.gvCart.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gvCart.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -134,6 +137,173 @@
             this.gvCart.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvCart.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dtDue
+            // 
+            this.dtDue.AutoRoundedCorners = true;
+            this.dtDue.BackColor = System.Drawing.Color.Transparent;
+            this.dtDue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.dtDue.BorderRadius = 24;
+            this.dtDue.Checked = true;
+            this.dtDue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtDue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.dtDue.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.dtDue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDue.Location = new System.Drawing.Point(1256, 330);
+            this.dtDue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtDue.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtDue.MinDate = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
+            this.dtDue.Name = "dtDue";
+            this.dtDue.Size = new System.Drawing.Size(361, 50);
+            this.dtDue.TabIndex = 6;
+            this.dtDue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtDue.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
+            this.dtDue.ValueChanged += new System.EventHandler(this.dtDue_ValueChanged);
+            // 
+            // dtRent
+            // 
+            this.dtRent.AutoRoundedCorners = true;
+            this.dtRent.BackColor = System.Drawing.Color.Transparent;
+            this.dtRent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.dtRent.BorderRadius = 24;
+            this.dtRent.Checked = true;
+            this.dtRent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtRent.Enabled = false;
+            this.dtRent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.dtRent.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtRent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
+            this.dtRent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRent.Location = new System.Drawing.Point(1256, 209);
+            this.dtRent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtRent.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtRent.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtRent.Name = "dtRent";
+            this.dtRent.Size = new System.Drawing.Size(361, 50);
+            this.dtRent.TabIndex = 7;
+            this.dtRent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtRent.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(1267, 295);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 32);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Due Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(1267, 175);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 32);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Rent Date";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.label7.Location = new System.Drawing.Point(1171, 753);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(254, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Deposit (30.000VND/Disc):";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lbDeposite
+            // 
+            this.lbDeposite.AutoSize = true;
+            this.lbDeposite.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDeposite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.lbDeposite.Location = new System.Drawing.Point(1451, 742);
+            this.lbDeposite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbDeposite.Name = "lbDeposite";
+            this.lbDeposite.Size = new System.Drawing.Size(210, 38);
+            this.lbDeposite.TabIndex = 9;
+            this.lbDeposite.Text = "xx.xxx.xxx VND";
+            // 
+            // lbRentPrice
+            // 
+            this.lbRentPrice.AutoSize = true;
+            this.lbRentPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRentPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbRentPrice.Location = new System.Drawing.Point(1451, 699);
+            this.lbRentPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbRentPrice.Name = "lbRentPrice";
+            this.lbRentPrice.Size = new System.Drawing.Size(169, 32);
+            this.lbRentPrice.TabIndex = 10;
+            this.lbRentPrice.Text = "xx.xxx.xxx VND";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label6.Location = new System.Drawing.Point(1171, 699);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 32);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Rent Price:";
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.BorderRadius = 15;
+            this.btnPlaceOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlaceOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPlaceOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPlaceOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPlaceOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPlaceOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnPlaceOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.ForeColor = System.Drawing.Color.White;
+            this.btnPlaceOrder.Location = new System.Drawing.Point(1244, 821);
+            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(388, 60);
+            this.btnPlaceOrder.TabIndex = 12;
+            this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
+            // 
+            // messsageBox
+            // 
+            this.messsageBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.messsageBox.Caption = "Your order ID is";
+            this.messsageBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.messsageBox.Parent = null;
+            this.messsageBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.messsageBox.Text = null;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(1256, 87);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(361, 60);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Image
             // 
             this.Image.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -147,6 +317,14 @@
             this.Image.Name = "Image";
             this.Image.ReadOnly = true;
             this.Image.Width = 175;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "DISC_ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
             // Disc_Name
             // 
@@ -192,168 +370,9 @@
             this.Total_price.ReadOnly = true;
             this.Total_price.Width = 180;
             // 
-            // dtDue
-            // 
-            this.dtDue.AutoRoundedCorners = true;
-            this.dtDue.BackColor = System.Drawing.Color.Transparent;
-            this.dtDue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.dtDue.BorderRadius = 19;
-            this.dtDue.Checked = true;
-            this.dtDue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtDue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.dtDue.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.dtDue.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDue.Location = new System.Drawing.Point(942, 268);
-            this.dtDue.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtDue.MinDate = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
-            this.dtDue.Name = "dtDue";
-            this.dtDue.Size = new System.Drawing.Size(271, 41);
-            this.dtDue.TabIndex = 6;
-            this.dtDue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dtDue.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
-            this.dtDue.ValueChanged += new System.EventHandler(this.dtDue_ValueChanged);
-            // 
-            // dtRent
-            // 
-            this.dtRent.AutoRoundedCorners = true;
-            this.dtRent.BackColor = System.Drawing.Color.Transparent;
-            this.dtRent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.dtRent.BorderRadius = 19;
-            this.dtRent.Checked = true;
-            this.dtRent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtRent.Enabled = false;
-            this.dtRent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.dtRent.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtRent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(214)))));
-            this.dtRent.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRent.Location = new System.Drawing.Point(942, 170);
-            this.dtRent.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtRent.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtRent.Name = "dtRent";
-            this.dtRent.Size = new System.Drawing.Size(271, 41);
-            this.dtRent.TabIndex = 7;
-            this.dtRent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dtRent.Value = new System.DateTime(2023, 1, 28, 0, 0, 0, 0);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(950, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Due Date";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(950, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Rent Date";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.label7.Location = new System.Drawing.Point(878, 612);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 21);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Deposit (30.000VND/Disc):";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lbDeposite
-            // 
-            this.lbDeposite.AutoSize = true;
-            this.lbDeposite.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDeposite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.lbDeposite.Location = new System.Drawing.Point(1088, 603);
-            this.lbDeposite.Name = "lbDeposite";
-            this.lbDeposite.Size = new System.Drawing.Size(164, 30);
-            this.lbDeposite.TabIndex = 9;
-            this.lbDeposite.Text = "xx.xxx.xxx VND";
-            // 
-            // lbRentPrice
-            // 
-            this.lbRentPrice.AutoSize = true;
-            this.lbRentPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRentPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbRentPrice.Location = new System.Drawing.Point(1088, 568);
-            this.lbRentPrice.Name = "lbRentPrice";
-            this.lbRentPrice.Size = new System.Drawing.Size(136, 25);
-            this.lbRentPrice.TabIndex = 10;
-            this.lbRentPrice.Text = "xx.xxx.xxx VND";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label6.Location = new System.Drawing.Point(878, 568);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Rent Price:";
-            // 
-            // btnPlaceOrder
-            // 
-            this.btnPlaceOrder.BorderRadius = 15;
-            this.btnPlaceOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlaceOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPlaceOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPlaceOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPlaceOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPlaceOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnPlaceOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaceOrder.ForeColor = System.Drawing.Color.White;
-            this.btnPlaceOrder.Location = new System.Drawing.Point(933, 667);
-            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(291, 49);
-            this.btnPlaceOrder.TabIndex = 12;
-            this.btnPlaceOrder.Text = "Place Order";
-            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
-            // 
-            // messsageBox
-            // 
-            this.messsageBox.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.messsageBox.Caption = "Your order ID is";
-            this.messsageBox.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
-            this.messsageBox.Parent = null;
-            this.messsageBox.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.messsageBox.Text = null;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BorderRadius = 15;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(942, 71);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(271, 49);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // UsCtr_Cart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnDelete);
@@ -367,8 +386,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.gvCart);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UsCtr_Cart";
-            this.Size = new System.Drawing.Size(1269, 789);
+            this.Size = new System.Drawing.Size(1692, 971);
             this.Load += new System.EventHandler(this.UsCtr_Cart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvCart)).EndInit();
             this.ResumeLayout(false);
@@ -389,11 +409,12 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btnPlaceOrder;
         private Guna.UI2.WinForms.Guna2MessageDialog messsageBox;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Disc_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_price;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
     }
 }

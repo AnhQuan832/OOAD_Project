@@ -122,13 +122,15 @@ namespace OOAD_Project
         private void btnReady_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Please wait for a minute. We are sending email to your customers!");
-
             SendNotification();
+            if (!isEmpty)
+            {
+                RemoveComingDisc();
+                MessageBox.Show("Send email successfully!");
+            }
             lbName.Text = "Coming soon";
             pbDisc.Image = Resources.Cream_logo;
             btnSubscribe.Enabled = false;
-            RemoveComingDisc();
-            MessageBox.Show("Send email successfully!");
         }
 
         private void LoadDataToCombobox()
@@ -153,12 +155,16 @@ namespace OOAD_Project
             string query = "select USER_MAIL from SUBSCRIBE, DISC, USERS where DISC.DISC_ID = SUBSCRIBE.DISC_ID and USERS.USER_ID = SUBSCRIBE.USER_ID and DISC_NAME = '" + lbName.Text + "'";
             cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
-            if (reader != null)
+            if (reader.HasRows)
             {
                 while (reader.Read())
                 {
                     Customer customer = new Customer(upComingDisc, reader["USER_MAIL"].ToString());
                 }
+            }
+            else
+            {
+                isEmpty = true;
             }
             con.Close();
             upComingDisc.Notify();

@@ -68,9 +68,10 @@ namespace OOAD_Project
             {
                 imgBox.Image = Resources.Cream_logo;
             }
-
-
-
         }
+
+
+
+
     }
 }

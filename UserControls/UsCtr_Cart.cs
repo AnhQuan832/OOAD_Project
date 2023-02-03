@@ -1,8 +1,13 @@
-﻿using System;
+﻿using FireSharp.Response;
+using OOAD_Project.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 namespace OOAD_Project
 {
@@ -139,9 +144,9 @@ namespace OOAD_Project
             UpdateCart();
         }
 
-        public void UpdateCart()
+        public async void UpdateCart()
         {
-            adapter = new SqlDataAdapter("SELECT DISC_NAME, DISC_PRICE, CD.AMOUNT, DISC_PRICE*CD.AMOUNT as TOTAL "
+            adapter = new SqlDataAdapter("SELECT DISC_NAME, CD.DISC_ID, DISC_PRICE, CD.AMOUNT, DISC_PRICE*CD.AMOUNT as TOTAL "
             + "FROM CART_DETAIL CD, DISC WHERE CD.DISC_ID = DISC.DISC_ID AND CD.USER_ID = " + fLogin.ID, con);
 
             SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
@@ -156,6 +161,8 @@ namespace OOAD_Project
 
             current = BindingContext[dataTable];
 
+            FireBaseConnection fireBaseConnection = new FireBaseConnection();
+
             string SQL = "select CART_PRICE from CART where USER_ID = " + fLogin.ID;
             lbRentPrice.Text = string.Format("{0:#,###} VNĐ", int.Parse(SQLConnection.GetFieldValues(SQL)));
             try
@@ -168,6 +175,31 @@ namespace OOAD_Project
 
             this.dtDue.Format = DateTimePickerFormat.Custom;
             this.dtRent.Format = DateTimePickerFormat.Custom;
+
+            for (int i = 0; i < gvCart.Rows.Count; i++)
+            {
+                String path = "Disc/" + gvCart.Rows[i].Cells[2].Value.ToString();
+
+                FirebaseResponse response = await fireBaseConnection.client.GetTaskAsync(path);
+                if (response.Body != "null")
+                {
+                    Image_Modal image = response.ResultAs<Image_Modal>();
+
+                    byte[] b = Convert.FromBase64String(image.Img);
+
+                    MemoryStream ms = new MemoryStream();
+                    ms.Write(b, 0, Convert.ToInt32(b.Length));
+
+                    Bitmap bm = new Bitmap(ms, false);
+                    ms.Dispose();
+
+                    gvCart.Rows[i].Cells[0].Value = bm;
+                }
+                else
+                {
+                    gvCart.Rows[i].Cells[0].Value = (Bitmap)Resources.Cream_logo;
+                }
+            }
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
