@@ -181,7 +181,7 @@
             this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsername.Location = new System.Drawing.Point(4, 282);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(7);
             this.tbUsername.MaxLength = 20;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.PasswordChar = '\0';
@@ -204,7 +204,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPassword.Location = new System.Drawing.Point(4, 378);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(7);
             this.tbPassword.MaxLength = 20;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -260,7 +260,7 @@
             this.tbUsernameSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbUsernameSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbUsernameSU.Location = new System.Drawing.Point(0, 71);
-            this.tbUsernameSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbUsernameSU.Margin = new System.Windows.Forms.Padding(7);
             this.tbUsernameSU.MaxLength = 20;
             this.tbUsernameSU.Name = "tbUsernameSU";
             this.tbUsernameSU.PasswordChar = '\0';
@@ -283,7 +283,7 @@
             this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAddress.Location = new System.Drawing.Point(0, 212);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(7);
             this.tbAddress.MaxLength = 2000;
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -307,7 +307,7 @@
             this.tbPasswordSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPasswordSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPasswordSU.Location = new System.Drawing.Point(0, 140);
-            this.tbPasswordSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbPasswordSU.Margin = new System.Windows.Forms.Padding(7);
             this.tbPasswordSU.MaxLength = 20;
             this.tbPasswordSU.Name = "tbPasswordSU";
             this.tbPasswordSU.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -399,7 +399,7 @@
             this.tbFullnameSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbFullnameSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbFullnameSU.Location = new System.Drawing.Point(0, 1);
-            this.tbFullnameSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbFullnameSU.Margin = new System.Windows.Forms.Padding(7);
             this.tbFullnameSU.MaxLength = 200;
             this.tbFullnameSU.Name = "tbFullnameSU";
             this.tbFullnameSU.PasswordChar = '\0';
@@ -422,11 +422,11 @@
             this.tbEmailSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbEmailSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbEmailSU.Location = new System.Drawing.Point(0, 284);
-            this.tbEmailSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbEmailSU.Margin = new System.Windows.Forms.Padding(7);
             this.tbEmailSU.MaxLength = 200;
             this.tbEmailSU.Name = "tbEmailSU";
             this.tbEmailSU.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.tbEmailSU.PasswordChar = '•';
+            this.tbEmailSU.PasswordChar = '\0';
             this.tbEmailSU.PlaceholderText = "Email";
             this.tbEmailSU.SelectedText = "";
             this.tbEmailSU.Size = new System.Drawing.Size(424, 60);
@@ -446,14 +446,15 @@
             this.tbAddressSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbAddressSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbAddressSU.Location = new System.Drawing.Point(0, 357);
-            this.tbAddressSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.tbAddressSU.MaxLength = 200;
+            this.tbAddressSU.Margin = new System.Windows.Forms.Padding(7);
+            this.tbAddressSU.MaxLength = 13;
             this.tbAddressSU.Name = "tbAddressSU";
             this.tbAddressSU.PasswordChar = '\0';
             this.tbAddressSU.PlaceholderText = "ID number";
             this.tbAddressSU.SelectedText = "";
             this.tbAddressSU.Size = new System.Drawing.Size(424, 60);
             this.tbAddressSU.TabIndex = 7;
+            this.tbAddressSU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbAddressSU_KeyPress);
             // 
             // tbPhonenumSU
             // 
@@ -469,7 +470,7 @@
             this.tbPhonenumSU.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPhonenumSU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbPhonenumSU.Location = new System.Drawing.Point(0, 428);
-            this.tbPhonenumSU.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tbPhonenumSU.Margin = new System.Windows.Forms.Padding(7);
             this.tbPhonenumSU.MaxLength = 10;
             this.tbPhonenumSU.Name = "tbPhonenumSU";
             this.tbPhonenumSU.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -478,6 +479,7 @@
             this.tbPhonenumSU.SelectedText = "";
             this.tbPhonenumSU.Size = new System.Drawing.Size(424, 60);
             this.tbPhonenumSU.TabIndex = 8;
+            this.tbPhonenumSU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhonenumSU_KeyPress);
             // 
             // panel1
             // 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -100,6 +101,88 @@ namespace OOAD_Project
 
             message.Caption = "Success";
             message.Show();
+            string mailAddress = "";
+            con.Open();
+            loadDT = "select USER_MAIL from rent, users where RENT.CUSTOMER_ID = USERS.USER_ID and RENT_ID = " + tbID.Text;
+            cmd = new SqlCommand(loadDT, con);
+            reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    mailAddress = (string)reader["USER_MAIL"];
+                }
+                reader.Close();
+            }
+            con.Close();
+
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("discManagementApp@gmail.com");
+                mail.To.Add(mailAddress);
+                mail.Subject = "Your orders in PQT store are ready";
+                mail.IsBodyHtml = true;
+                mail.Body = GetMailBody();
+
+                mail.Priority = MailPriority.High;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("discManagementApp@gmail.com", "bgxowptneyoklxgh");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private string GetMailBody()
+        {
+            try
+            {
+                string messageBody = "<font>Please check your rental detail below: </font><br>";
+                messageBody += "<font>Order ID: " + tbID.Text + "</font><br>";
+                messageBody += "<font>Rent date: " + tbRentdate.Text + "</font><br>";
+                messageBody += "<font>Due date: " + tbDuedate.Text + "</font><br>";
+                messageBody += "<font>Rent price: " + lbRent.Text + "</font><br>";
+                messageBody += "<font>Deposit: " + lbDeposit.Text + "</font><br><br>";
+
+                if (gvOrder.RowCount == 0) return messageBody;
+                string htmlTableStart = "<table style=\"border-collapse:collapse; text-align:center;\" >";
+                string htmlTableEnd = "</table>";
+                string htmlHeaderRowStart = "<tr style=\"background-color:#396EB0; color:#ffffff;\">";
+                string htmlHeaderRowEnd = "</tr>";
+                string htmlTrStart = "<tr style=\"color:#555555;\">";
+                string htmlTrEnd = "</tr>";
+                string htmlTdStart = "<td style=\" border-color:#396EB0; border-style:solid; border-width:thin; padding: 5px;\">";
+                string htmlTdEnd = "</td>";
+                messageBody += htmlTableStart;
+                messageBody += htmlHeaderRowStart;
+                messageBody += htmlTdStart + "Disc name" + htmlTdEnd;
+                messageBody += htmlTdStart + "Price/day" + htmlTdEnd;
+                messageBody += htmlTdStart + "Amount" + htmlTdEnd;
+                messageBody += htmlTdStart + "Total" + htmlTdEnd;
+                messageBody += htmlHeaderRowEnd;
+                for (int i = 0; i <= gvOrder.RowCount - 1; i++)
+                {
+                    messageBody = messageBody + htmlTrStart;
+                    messageBody = messageBody + htmlTdStart + gvOrder.Rows[i].Cells[0].Value + htmlTdEnd;
+                    messageBody = messageBody + htmlTdStart + gvOrder.Rows[i].Cells[2].Value + htmlTdEnd;
+                    messageBody = messageBody + htmlTdStart + gvOrder.Rows[i].Cells[1].Value + htmlTdEnd;
+                    messageBody = messageBody + htmlTdStart + (int)gvOrder.Rows[i].Cells[1].Value * (int)gvOrder.Rows[i].Cells[2].Value + htmlTdEnd;
+                    messageBody = messageBody + htmlTrEnd;
+                }
+                messageBody = messageBody + htmlTableEnd;
+                return messageBody; // return HTML Table as string from this function
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }
