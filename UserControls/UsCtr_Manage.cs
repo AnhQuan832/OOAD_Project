@@ -567,7 +567,7 @@ namespace OOAD_Project
             else if (cbMode.SelectedIndex == 1)
             {
                 sql += " and datepart(quarter,return_date) = " + cbValues.Text;
-                reportTitle += " IN QUARTER " + cbValues.Text + " and year(return_date) = " + DateTime.Now.Year.ToString();
+                reportTitle += " IN QUARTER " + cbValues.Text + " OF YEAR " + DateTime.Now.Year.ToString();
             }
             else
             {
@@ -650,6 +650,18 @@ namespace OOAD_Project
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void btnShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnShowPassword.Checked)
+            {
+                tbPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                tbPassword.PasswordChar = '•';
+            }
         }
     }
 

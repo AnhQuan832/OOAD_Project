@@ -37,6 +37,7 @@ namespace OOAD_Project
             if (permission == 0)
             {
                 btnJustify.Visible = false;
+                btnReady.Visible = false;
             }
             this.discID = discID;
             cbDiscName.Visible = false;
@@ -113,7 +114,13 @@ namespace OOAD_Project
                 btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
                 lbName.Text = cbDiscName.SelectedValue.ToString();
                 btnSubscribe.Enabled = true;
-
+                con.Open();
+                cmd = con.CreateCommand();
+                cmd.CommandText = "delete from SUBSCRIBE where DISC_ID = " + discID;
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from COMINGDISC where DISC_ID = " + discID;
+                cmd.ExecuteNonQuery();
+                con.Close();
                 UpdateComingDisc();
             }
 
@@ -135,9 +142,9 @@ namespace OOAD_Project
 
         private void LoadDataToCombobox()
         {
-            cbDiscName.Items.Clear();
+            //cbDiscName.Items.Clear();
             con.Open();
-            string query = "select distinct(DISC_NAME) from DISC";
+            string query = "select DISC_NAME from DISC where DISC_ID not in (select DISC_ID from COMINGDISC)";
             cmd = new SqlCommand(query, con);
             da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -186,12 +193,19 @@ namespace OOAD_Project
                 }
             }
             con.Close();
+            try
+            {
+                con.Open();
+                cmd = con.CreateCommand();
+                cmd.CommandText = "insert into COMINGDISC values(" + discID + ")";
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+            }
 
-            con.Open();
-            cmd = con.CreateCommand();
-            cmd.CommandText = "insert into COMINGDISC values(" + discID + ")";
-            cmd.ExecuteNonQuery();
-            con.Close();
             fireBaseConnection.RetrieveImage(pbDisc, "Disc/" + discID);
         }
         private void RemoveComingDisc()
