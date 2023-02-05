@@ -176,3 +176,12 @@ D:\OOAD\OOAD\bin\Debug\Newtonsoft.Json.dll
 D:\OOAD\OOAD\bin\Debug\RestSharp.dll
 D:\OOAD\OOAD\bin\Debug\Newtonsoft.Json.xml
 D:\OOAD\OOAD\bin\Debug\RestSharp.xml
+D:\OOAD\OOAD\bin\Debug\BouncyCastle.Crypto.dll
+D:\OOAD\OOAD\bin\Debug\itextsharp.dll
+D:\OOAD\OOAD\bin\Debug\itextsharp.xml
+D:\OOAD\OOAD\bin\Debug\PdfSharp.Charting.dll
+D:\OOAD\OOAD\bin\Debug\PdfSharp.dll
+D:\OOAD\OOAD\bin\Debug\PdfSharp.xml
+D:\OOAD\OOAD\bin\Debug\PdfSharp.Charting.xml
+D:\OOAD\OOAD\bin\Debug\de\PdfSharp.resources.dll
+D:\OOAD\OOAD\bin\Debug\de\PdfSharp.Charting.resources.dll
