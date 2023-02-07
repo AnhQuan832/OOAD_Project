@@ -85,8 +85,8 @@ namespace OOAD_Project
                     //Thiết lập vị trí của các item
                     if (count % 4 == 0)
                     {
-                        if (count > 0) shopItem[count].Location = new Point(70, shopItem[count - 1].Location.Y + 380);
-                        else shopItem[count].Location = new Point(70, 15);
+                        if (count > 0) shopItem[count].Location = new Point(50, shopItem[count - 1].Location.Y + 380);
+                        else shopItem[count].Location = new Point(50, 15);
                     }
                     else
                     {

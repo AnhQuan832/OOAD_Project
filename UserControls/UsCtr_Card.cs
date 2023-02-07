@@ -109,31 +109,35 @@ namespace OOAD_Project
             }
             else
             {
-                string discID = "";
-                con.Open();
-                string query = "select DISC_ID from DISC where DISC_NAME = '" + lbName.Text + "'";
-                cmd = new SqlCommand(query, con);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader != null)
+                if (lbName.Text != "Coming soon")
                 {
-                    while (reader.Read())
+                    string discID = "";
+                    con.Open();
+                    string query = "select DISC_ID from DISC where DISC_NAME = '" + lbName.Text + "'";
+                    cmd = new SqlCommand(query, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader != null)
                     {
-                        discID = reader["DISC_ID"].ToString();
+                        while (reader.Read())
+                        {
+                            discID = reader["DISC_ID"].ToString();
+                        }
                     }
+                    con.Close();
+
+                    con.Open();
+                    cmd = con.CreateCommand();
+                    cmd.CommandText = "delete from SUBSCRIBE where DISC_ID = " + discID;
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = "delete from COMINGDISC where DISC_ID = " + discID;
+                    cmd.ExecuteNonQuery();
+                    con.Close();
                 }
-                con.Close();
                 cbDiscName.Visible = false;
                 lbName.Visible = true;
                 btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
                 lbName.Text = cbDiscName.SelectedValue.ToString();
                 btnSubscribe.Enabled = true;
-                con.Open();
-                cmd = con.CreateCommand();
-                cmd.CommandText = "delete from SUBSCRIBE where DISC_ID = " + discID;
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from COMINGDISC where DISC_ID = " + discID;
-                cmd.ExecuteNonQuery();
-                con.Close();
                 UpdateComingDisc();
             }
 
