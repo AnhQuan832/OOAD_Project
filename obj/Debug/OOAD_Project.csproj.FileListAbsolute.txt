@@ -195,3 +195,4 @@ D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\PdfSharp.Charting.xml
 D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\de\PdfSharp.resources.dll
 D:\BaiTap\Nam3\HK1\OOAD\project\bin\Debug\de\PdfSharp.Charting.resources.dll
 D:\BaiTap\Nam3\HK1\OOAD\project\obj\Debug\OOAD_Project.Forms.fForgotPassword.resources
+D:\OOAD\OOAD\obj\Debug\OOAD_Project.Forms.fForgotPassword.resources
