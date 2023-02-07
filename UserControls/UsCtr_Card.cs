@@ -109,6 +109,19 @@ namespace OOAD_Project
             }
             else
             {
+                string discID = "";
+                con.Open();
+                string query = "select DISC_ID from DISC where DISC_NAME = '" + lbName.Text + "'";
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader != null)
+                {
+                    while (reader.Read())
+                    {
+                        discID = reader["DISC_ID"].ToString();
+                    }
+                }
+                con.Close();
                 cbDiscName.Visible = false;
                 lbName.Visible = true;
                 btnJustify.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
