@@ -251,8 +251,10 @@ namespace OOAD_Project
                     fireBaseConnection.PushImage(pcDisc, "Disc/" + discID);
                     //fireBaseConnection.RetrieveImage(pcDisc, "Disc/" + tbDiscID);
                     LoadDataDisc();
-                }
+                    LoadDataDiscImport();
 
+                }
+                con.Close();
 
             }
         }
@@ -332,6 +334,7 @@ namespace OOAD_Project
             cmd.ExecuteNonQuery();
             con.Close();
             LoadDataDiscImport();
+            LoadDataDisc();
         }
 
         private void gvDisc_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -358,19 +361,13 @@ namespace OOAD_Project
             {
                 int genreID = GetGenreID();
                 int producerID = GetProducerID();
-                con.Open();
-                string check = "SELECT DISC_NAME FROM DISC WHERE DISC_NAME = '" + tbDiscName.Text.Trim() + "'";
-                cmd = new SqlCommand(check, con);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (!dr.HasRows)
+                if (tbDiscID.Text == "")
                 {
-                    messageDisc.Caption = tbDiscName.Text.Trim() + " is not existing in store!";
+                    messageDisc.Caption = "Please choose an disc to edit";
                     messageDisc.Show();
                 }
                 else
                 {
-                    con.Close();
                     con.Open();
                     string register = "update DISC set DISC_NAME = '" + tbDiscName.Text.Trim() + "', DISC_AMOUNT = " + nbAmount.Value +
                         ", DISC_PRODUCER = " + producerID + ", DISC_PRICE = " + tbRentPrice.Text + ", DISC_GENRE = " + genreID + " where DISC_ID = " + tbDiscID.Text;
@@ -382,6 +379,8 @@ namespace OOAD_Project
                     LoadDataDisc();
                 }
                 con.Close();
+
+                LoadDataDiscImport();
             }
         }
 
