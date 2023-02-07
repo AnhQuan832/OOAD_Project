@@ -56,6 +56,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.forgotPasswordBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pnBackground.SuspendLayout();
             this.pnSignIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -77,7 +78,7 @@
             this.pnBackground.Controls.Add(this.pnSignUp);
             this.pnBackground.FillColor = System.Drawing.Color.White;
             this.pnBackground.Location = new System.Drawing.Point(980, 151);
-            this.pnBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnBackground.Margin = new System.Windows.Forms.Padding(2);
             this.pnBackground.Name = "pnBackground";
             this.pnBackground.Radius = 10;
             this.pnBackground.ShadowColor = System.Drawing.Color.Black;
@@ -86,6 +87,7 @@
             // 
             // pnSignIn
             // 
+            this.pnSignIn.Controls.Add(this.forgotPasswordBtn);
             this.pnSignIn.Controls.Add(this.guna2PictureBox1);
             this.pnSignIn.Controls.Add(this.btnSignUp);
             this.pnSignIn.Controls.Add(this.btnLogin);
@@ -94,7 +96,7 @@
             this.pnSignIn.Controls.Add(this.tbPassword);
             this.pnSignIn.Controls.Add(this.guna2HtmlLabel1);
             this.pnSignIn.Location = new System.Drawing.Point(60, 53);
-            this.pnSignIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnSignIn.Margin = new System.Windows.Forms.Padding(2);
             this.pnSignIn.Name = "pnSignIn";
             this.pnSignIn.Size = new System.Drawing.Size(318, 540);
             this.pnSignIn.TabIndex = 7;
@@ -104,7 +106,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(86, 7);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(152, 178);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,8 +124,8 @@
             this.btnSignUp.FillColor = System.Drawing.Color.Transparent;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.btnSignUp.Location = new System.Drawing.Point(86, 494);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignUp.Location = new System.Drawing.Point(86, 480);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(161, 35);
             this.btnSignUp.TabIndex = 10;
@@ -141,8 +143,8 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(59, 436);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(59, 423);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(204, 53);
             this.btnLogin.TabIndex = 11;
@@ -156,8 +158,8 @@
             this.btnShowPassword.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.btnShowPassword.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowPassword.Location = new System.Drawing.Point(10, 376);
-            this.btnShowPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowPassword.Location = new System.Drawing.Point(10, 370);
+            this.btnShowPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowPassword.Name = "btnShowPassword";
             this.btnShowPassword.Size = new System.Drawing.Size(30, 20);
             this.btnShowPassword.TabIndex = 9;
@@ -220,8 +222,8 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(45, 375);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 369);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(174, 30);
             this.guna2HtmlLabel1.TabIndex = 13;
@@ -241,7 +243,7 @@
             this.pnSignUp.Controls.Add(this.tbAddressSU);
             this.pnSignUp.Controls.Add(this.tbPhonenumSU);
             this.pnSignUp.Location = new System.Drawing.Point(60, 53);
-            this.pnSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.pnSignUp.Name = "pnSignUp";
             this.pnSignUp.Size = new System.Drawing.Size(318, 540);
             this.pnSignUp.TabIndex = 7;
@@ -323,7 +325,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(34, 409);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(174, 33);
             this.guna2HtmlLabel2.TabIndex = 12;
@@ -341,7 +343,7 @@
             this.btnBackToLogin.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBackToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnBackToLogin.Location = new System.Drawing.Point(86, 503);
-            this.btnBackToLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBackToLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackToLogin.Name = "btnBackToLogin";
             this.btnBackToLogin.Size = new System.Drawing.Size(141, 35);
             this.btnBackToLogin.TabIndex = 10;
@@ -360,7 +362,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Location = new System.Drawing.Point(59, 446);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(204, 54);
             this.btnCreate.TabIndex = 11;
@@ -375,7 +377,7 @@
             this.btnShowPasswordSU.CheckedState.InnerColor = System.Drawing.Color.White;
             this.btnShowPasswordSU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowPasswordSU.Location = new System.Drawing.Point(-1, 410);
-            this.btnShowPasswordSU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowPasswordSU.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowPasswordSU.Name = "btnShowPasswordSU";
             this.btnShowPasswordSU.Size = new System.Drawing.Size(30, 20);
             this.btnShowPasswordSU.TabIndex = 9;
@@ -488,7 +490,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1455, 32);
             this.panel1.TabIndex = 2;
@@ -504,7 +506,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
             this.iconButton1.Location = new System.Drawing.Point(1395, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(30, 32);
             this.iconButton1.TabIndex = 3;
@@ -521,7 +523,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
             this.btnClose.Location = new System.Drawing.Point(1425, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(0, 3, 3, 0);
             this.btnClose.Size = new System.Drawing.Size(30, 32);
@@ -538,6 +540,25 @@
             this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.message.Text = null;
             // 
+            // forgotPasswordBtn
+            // 
+            this.forgotPasswordBtn.BorderRadius = 15;
+            this.forgotPasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forgotPasswordBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPasswordBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPasswordBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.forgotPasswordBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.forgotPasswordBtn.FillColor = System.Drawing.Color.Transparent;
+            this.forgotPasswordBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.forgotPasswordBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
+            this.forgotPasswordBtn.Location = new System.Drawing.Point(185, 364);
+            this.forgotPasswordBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.forgotPasswordBtn.Name = "forgotPasswordBtn";
+            this.forgotPasswordBtn.Size = new System.Drawing.Size(130, 30);
+            this.forgotPasswordBtn.TabIndex = 14;
+            this.forgotPasswordBtn.Text = "Forgot Password";
+            this.forgotPasswordBtn.Click += new System.EventHandler(this.forgotPasswordBtn_Click);
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,7 +570,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "   ";
@@ -590,6 +611,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tbPasswordSU;
         private Guna.UI2.WinForms.Guna2TextBox tbAddress;
         private Guna.UI2.WinForms.Guna2MessageDialog message;
+        private Guna.UI2.WinForms.Guna2Button forgotPasswordBtn;
     }
 }
 

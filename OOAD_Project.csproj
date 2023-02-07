@@ -94,6 +94,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\fForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fForgotPassword.Designer.cs">
+      <DependentUpon>fForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Image_Modal.cs" />
     <Compile Include="FireBaseConnection.cs" />
     <Compile Include="Customer.cs" />
@@ -203,6 +209,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fForgotPassword.resx">
+      <DependentUpon>fForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>

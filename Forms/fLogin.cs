@@ -1,5 +1,7 @@
-﻿using System;
+﻿using OOAD_Project.Forms;
+using System;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace OOAD_Project
@@ -171,6 +173,12 @@ namespace OOAD_Project
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void forgotPasswordBtn_Click(object sender, EventArgs e)
+        {
+            fForgotPassword fForgotPassword = new fForgotPassword();
+            fForgotPassword.ShowDialog();
         }
     }
 

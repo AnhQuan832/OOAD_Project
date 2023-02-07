@@ -62,7 +62,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
             this.btnClose.Location = new System.Drawing.Point(66, 330);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 50);
             this.btnClose.TabIndex = 39;
@@ -81,7 +81,7 @@
             this.brnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnConfirm.ForeColor = System.Drawing.Color.White;
             this.brnConfirm.Location = new System.Drawing.Point(313, 330);
-            this.brnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.brnConfirm.Name = "brnConfirm";
             this.brnConfirm.Size = new System.Drawing.Size(200, 50);
             this.brnConfirm.TabIndex = 38;
@@ -94,7 +94,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(101, 249);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(174, 30);
             this.guna2HtmlLabel2.TabIndex = 36;
@@ -125,7 +125,7 @@
             // tbNewPass
             // 
             this.tbNewPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.tbNewPass.BorderRadius = 20;
+            this.tbNewPass.BorderRadius = 10;
             this.tbNewPass.BorderThickness = 2;
             this.tbNewPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewPass.DefaultText = "";
@@ -150,7 +150,7 @@
             // tbOldPass
             // 
             this.tbOldPass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(110)))), ((int)(((byte)(176)))));
-            this.tbOldPass.BorderRadius = 20;
+            this.tbOldPass.BorderRadius = 10;
             this.tbOldPass.BorderThickness = 2;
             this.tbOldPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbOldPass.DefaultText = "";
@@ -199,12 +199,13 @@
             this.lbNotification.Name = "lbNotification";
             this.lbNotification.Size = new System.Drawing.Size(3, 2);
             this.lbNotification.TabIndex = 41;
+            this.lbNotification.Text = null;
             // 
             // fChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(591, 409);
             this.Controls.Add(this.lbNotification);
             this.Controls.Add(this.btnShowPassword);
@@ -216,7 +217,7 @@
             this.Controls.Add(this.tbNewPass);
             this.Controls.Add(this.tbOldPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
