@@ -65,83 +65,93 @@ namespace OOAD_Project
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            int status = 0;
-            int rentID = 0;
-            messsageBox.Caption = "Order successfully";
-            messsageBox.Show();
-
-            dtDue.CustomFormat = "yyyy-MM-dd";
-            dtRent.CustomFormat = "yyyy-MM-dd";
-
-            con.Open();
-            string loadDT = "select STATUS_ID from STATUS where STATUS_NAME = 'Ordering'";
-            SqlCommand cmd = new SqlCommand(loadDT, con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.HasRows)
+            if (gvCart.Rows.Count != 0)
             {
-                while (reader.Read())
-                {
-                    status = (int)reader["STATUS_ID"];
-                }
-                reader.Close();
-            }
-            con.Close();
+                int status = 0;
+                int rentID = 0;
+                messsageBox.Caption = "Order successfully";
+                messsageBox.Show();
 
-            con.Open();
-            string insert = "insert into RENT (CUSTOMER_ID, RENT_DATE, DUE_DATE, RENT_DEPOSIT, TOTAL_PRICE, STATUS) values(" +
-                fLogin.ID + ",'" + dtRent.Text + "','" + dtDue.Text
-                + "'," + lbDeposite.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + lbRentPrice.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + status + ")";
-            cmd = new SqlCommand(insert, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+                dtDue.CustomFormat = "yyyy-MM-dd";
+                dtRent.CustomFormat = "yyyy-MM-dd";
 
-
-            con.Open();
-            loadDT = "select DISC_ID, AMOUNT from CART_DETAIL where USER_ID = " + fLogin.ID;
-            cmd = new SqlCommand(loadDT, con);
-            reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    listID.Add((int)reader["DISC_ID"]);
-                    listAmount.Add((int)reader["AMOUNT"]);
-                }
-                reader.Close();
-            }
-            con.Close();
-
-            con.Open();
-            loadDT = "select TOP 1(RENT_ID) from RENT order by RENT_ID desc";
-            cmd = new SqlCommand(loadDT, con);
-            reader = cmd.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    rentID = (int)reader["RENT_ID"];
-                }
-                reader.Close();
-            }
-            con.Close();
-
-            for (int i = 0; i < listID.Count; i++)
-            {
                 con.Open();
-                insert = "insert into RENT_DETAIL (RENT_ID, DISC_ID, RENT_AMOUNT) values (" + rentID + "," + listID[i] + "," + listAmount[i] + ")";
+                string loadDT = "select STATUS_ID from STATUS where STATUS_NAME = 'Ordering'";
+                SqlCommand cmd = new SqlCommand(loadDT, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        status = (int)reader["STATUS_ID"];
+                    }
+                    reader.Close();
+                }
+                con.Close();
+
+
+                con.Open();
+                string insert = "insert into RENT (CUSTOMER_ID, RENT_DATE, DUE_DATE, RENT_DEPOSIT, TOTAL_PRICE, STATUS) values(" +
+                    fLogin.ID + ",'" + dtRent.Text + "','" + dtDue.Text
+                    + "'," + lbDeposite.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + lbRentPrice.Text.Remove(lbDeposite.Text.IndexOf(" ")).Replace(",", "") + "," + status + ")";
                 cmd = new SqlCommand(insert, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+
+                con.Open();
+                loadDT = "select DISC_ID, AMOUNT from CART_DETAIL where USER_ID = " + fLogin.ID;
+                cmd = new SqlCommand(loadDT, con);
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        listID.Add((int)reader["DISC_ID"]);
+                        listAmount.Add((int)reader["AMOUNT"]);
+                    }
+                    reader.Close();
+                }
+                con.Close();
+
+                con.Open();
+                loadDT = "select TOP 1(RENT_ID) from RENT order by RENT_ID desc";
+                cmd = new SqlCommand(loadDT, con);
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        rentID = (int)reader["RENT_ID"];
+                    }
+                    reader.Close();
+                }
+                con.Close();
+
+                for (int i = 0; i < listID.Count; i++)
+                {
+                    con.Open();
+                    insert = "insert into RENT_DETAIL (RENT_ID, DISC_ID, RENT_AMOUNT) values (" + rentID + "," + listID[i] + "," + listAmount[i] + ")";
+                    cmd = new SqlCommand(insert, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+                con.Open();
+                string delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
+                cmd = new SqlCommand(delete, con);
+                cmd.ExecuteNonQuery();
+
+
+                con.Close();
+                UpdateCart();
+            }
+            else
+            {
+                messsageBox.Caption = "Your cart is empty!";
+                messsageBox.Show();
             }
 
-            con.Open();
-            string delete = "delete from CART_DETAIL where USER_ID = " + fLogin.ID;
-            cmd = new SqlCommand(delete, con);
-            cmd.ExecuteNonQuery();
-
-
-            con.Close();
-            UpdateCart();
         }
 
         public async void UpdateCart()

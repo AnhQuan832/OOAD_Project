@@ -663,6 +663,40 @@ namespace OOAD_Project
                 tbPassword.PasswordChar = '•';
             }
         }
+
+        private void gvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string position = "";
+            con.Open();
+            string loadDT = "select * from USERS, POSITION where USERS.USER_POSITION = POSITION.POSITION_ID and USER_NAME = N'" + gvStaff.Rows[e.RowIndex].Cells[0].Value.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(loadDT, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    tbUsername.Text = (string)reader["USER_NAME"];
+                    tbPassword.Text = (string)reader["USER_PASSWORD"];
+                    tbFullname.Text = (string)reader["USER_FULLNAME"];
+                    tbAddress.Text = (string)reader["USER_ADDRESS"];
+                    tbMail.Text = (string)reader["USER_MAIL"];
+                    tbIDnum.Text = (string)reader["USER_ID_NUMBER"];
+                    tbPhonenum.Text = (string)reader["USER_PHONE"];
+                    position = (string)reader["POSITION_NAME"];
+                }
+                reader.Close();
+            }
+            con.Close();
+
+            if (position == "Staff")
+            {
+                cbPosition.SelectedIndex = 0;
+            }
+            else
+            {
+                cbPosition.SelectedIndex = 1;
+            }
+        }
     }
 
 }
